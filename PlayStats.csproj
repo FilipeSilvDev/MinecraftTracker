@@ -1,0 +1,107 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows10.0.19041.0</TargetFramework>
+    <TargetPlatformMinVersion>10.0.17763.0</TargetPlatformMinVersion>
+    <RootNamespace>PlayStats</RootNamespace>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <Platforms>x86;x64;ARM64</Platforms>
+    <RuntimeIdentifiers>win-x86;win-x64;win-arm64</RuntimeIdentifiers>
+    <PublishProfile>win-$(Platform).pubxml</PublishProfile>
+    <UseWinUI>true</UseWinUI>
+    <EnableMsixTooling>true</EnableMsixTooling>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Remove="Assets\gamepulse-icone.altform-lightunplated_targetsize-16.png" />
+    <Content Remove="Assets\gamepulse-icone.altform-lightunplated_targetsize-24.png" />
+    <Content Remove="Assets\gamepulse-icone.altform-lightunplated_targetsize-256.png" />
+    <Content Remove="Assets\gamepulse-icone.altform-lightunplated_targetsize-32.png" />
+    <Content Remove="Assets\gamepulse-icone.altform-lightunplated_targetsize-48.png" />
+    <Content Remove="Assets\gamepulse-icone.altform-unplated_targetsize-16.png" />
+    <Content Remove="Assets\gamepulse-icone.altform-unplated_targetsize-24.png" />
+    <Content Remove="Assets\gamepulse-icone.altform-unplated_targetsize-256.png" />
+    <Content Remove="Assets\gamepulse-icone.altform-unplated_targetsize-32.png" />
+    <Content Remove="Assets\gamepulse-icone.altform-unplated_targetsize-48.png" />
+    <Content Remove="Assets\minecraft_cover.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Assets\Covers\minecraft_cover.png" />
+    <None Remove="Assets\gamepulse-icone.scale-100.png" />
+    <None Remove="Assets\gamepulse-icone.scale-125.png" />
+    <None Remove="Assets\gamepulse-icone.scale-150.png" />
+    <None Remove="Assets\gamepulse-icone.scale-200.png" />
+    <None Remove="Assets\gamepulse-icone.scale-400.png" />
+    <None Remove="Assets\gamepulse-icone.targetsize-16.png" />
+    <None Remove="Assets\gamepulse-icone.targetsize-16_altform-lightunplated.png" />
+    <None Remove="Assets\gamepulse-icone.targetsize-16_altform-unplated.png" />
+    <None Remove="Assets\gamepulse-icone.targetsize-24.png" />
+    <None Remove="Assets\gamepulse-icone.targetsize-24_altform-lightunplated.png" />
+    <None Remove="Assets\gamepulse-icone.targetsize-24_altform-unplated.png" />
+    <None Remove="Assets\gamepulse-icone.targetsize-256.png" />
+    <None Remove="Assets\gamepulse-icone.targetsize-256_altform-lightunplated.png" />
+    <None Remove="Assets\gamepulse-icone.targetsize-256_altform-unplated.png" />
+    <None Remove="Assets\gamepulse-icone.targetsize-32.png" />
+    <None Remove="Assets\gamepulse-icone.targetsize-32_altform-lightunplated.png" />
+    <None Remove="Assets\gamepulse-icone.targetsize-32_altform-unplated.png" />
+    <None Remove="Assets\gamepulse-icone.targetsize-48.png" />
+    <None Remove="Assets\gamepulse-icone.targetsize-48_altform-lightunplated.png" />
+    <None Remove="Assets\gamepulse-icone.targetsize-48_altform-unplated.png" />
+    <None Remove="Assets\Icones\minecraft-modern-icon.png" />
+    <None Remove="Assets\Icones\trackstats-icone.png" />
+	<None Remove="Assets\minecraft_cover.jpg" />
+	<None Remove="Assets\minecraft-moderns-icon.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+	  <Content Remove="Assets\trackstats-icone.ico" />
+	  <Content Remove="Assets\trackstats-icone.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Manifest Include="$(ApplicationManifest)" />
+  </ItemGroup>
+
+  <!--
+    Defining the "Msix" ProjectCapability here allows the Single-project MSIX Packaging
+    Tools extension to be activated for this project even if the Windows App SDK Nuget
+    package has not yet been restored.
+  -->
+  <ItemGroup Condition="'$(DisableMsixProjectCapabilityAddedByProject)'!='true' and '$(EnableMsixTooling)'=='true'">
+    <ProjectCapability Include="Msix" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Data.Sqlite" Version="10.0.12" />
+    <PackageReference Include="Microsoft.Windows.SDK.BuildTools" Version="10.0.28000.2705" />
+    <PackageReference Include="Microsoft.WindowsAppSDK" Version="2.4.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Update="Assets\Covers\minecraft_cover.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Assets\Icones\minecraft-modern-icon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Assets\Icones\trackstats-icone.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <!--
+    Defining the "HasPackageAndPublishMenuAddedByProject" property here allows the Solution
+    Explorer "Package and Publish" context menu entry to be enabled for this project even if
+    the Windows App SDK Nuget package has not yet been restored.
+  -->
+  <PropertyGroup Condition="'$(DisableHasPackageAndPublishMenuAddedByProject)'!='true' and '$(EnableMsixTooling)'=='true'">
+    <HasPackageAndPublishMenu>true</HasPackageAndPublishMenu>
+  </PropertyGroup>
+
+  <!-- Publish Properties -->
+  <PropertyGroup>
+    <PublishReadyToRun Condition="'$(Configuration)' == 'Debug'">False</PublishReadyToRun>
+    <PublishReadyToRun Condition="'$(Configuration)' != 'Debug'">True</PublishReadyToRun>
+    <PublishTrimmed Condition="'$(Configuration)' == 'Debug'">False</PublishTrimmed>
+    <PublishTrimmed Condition="'$(Configuration)' != 'Debug'">True</PublishTrimmed>
+    <DefaultLanguage>pt-BR</DefaultLanguage>
+  </PropertyGroup>
+</Project>
