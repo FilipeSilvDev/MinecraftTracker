@@ -62,7 +62,7 @@ namespace TrackerGames
                 AppWindow appWindow = AppWindow.GetFromWindowId(wndId);
 
                 // Caminho para o arquivo .ico na pasta do aplicativo
-                string iconPath = System.IO.Path.Combine(AppContext.BaseDirectory, "Assets", "trackstats-icone.ico");
+                string iconPath = System.IO.Path.Combine(AppContext.BaseDirectory, "Assets", "MinecraftTracker_icone.ico");
                 appWindow.SetIcon(iconPath);
             }
         }

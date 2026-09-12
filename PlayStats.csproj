@@ -3,7 +3,7 @@
     <OutputType>WinExe</OutputType>
     <TargetFramework>net8.0-windows10.0.19041.0</TargetFramework>
     <TargetPlatformMinVersion>10.0.17763.0</TargetPlatformMinVersion>
-    <RootNamespace>PlayStats</RootNamespace>
+    <RootNamespace>MinecraftTracker</RootNamespace>
     <ApplicationManifest>app.manifest</ApplicationManifest>
     <Platforms>x86;x64;ARM64</Platforms>
     <RuntimeIdentifiers>win-x86;win-x64;win-arm64</RuntimeIdentifiers>
@@ -13,52 +13,48 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
   <ItemGroup>
-    <Content Remove="Assets\gamepulse-icone.altform-lightunplated_targetsize-16.png" />
-    <Content Remove="Assets\gamepulse-icone.altform-lightunplated_targetsize-24.png" />
-    <Content Remove="Assets\gamepulse-icone.altform-lightunplated_targetsize-256.png" />
-    <Content Remove="Assets\gamepulse-icone.altform-lightunplated_targetsize-32.png" />
-    <Content Remove="Assets\gamepulse-icone.altform-lightunplated_targetsize-48.png" />
-    <Content Remove="Assets\gamepulse-icone.altform-unplated_targetsize-16.png" />
-    <Content Remove="Assets\gamepulse-icone.altform-unplated_targetsize-24.png" />
-    <Content Remove="Assets\gamepulse-icone.altform-unplated_targetsize-256.png" />
-    <Content Remove="Assets\gamepulse-icone.altform-unplated_targetsize-32.png" />
-    <Content Remove="Assets\gamepulse-icone.altform-unplated_targetsize-48.png" />
+    <Content Remove="Assets\minecraftTracker-icone.altform-lightunplated_targetsize-16.png" />
+    <Content Remove="Assets\minecraftTracker-icone.altform-lightunplated_targetsize-256.png" />
+    <Content Remove="Assets\minecraftTracker-icone.altform-lightunplated_targetsize-48.png" />
+    <Content Remove="Assets\minecraftTracker-icone.altform-unplated_targetsize-16.png" />
+    <Content Remove="Assets\minecraftTracker-icone.altform-unplated_targetsize-256.png" />
+    <Content Remove="Assets\minecraftTracker-icone.altform-unplated_targetsize-48.png" />
     <Content Remove="Assets\minecraft_cover.jpg" />
     <Content Remove="Assets\Sounds\levelup_sound.wav" />
+    <Content Remove="Assets\SplashScreen_Base.png" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="Assets\Covers\minecraft_cover.png" />
-    <None Remove="Assets\gamepulse-icone.scale-100.png" />
-    <None Remove="Assets\gamepulse-icone.scale-125.png" />
-    <None Remove="Assets\gamepulse-icone.scale-150.png" />
-    <None Remove="Assets\gamepulse-icone.scale-200.png" />
-    <None Remove="Assets\gamepulse-icone.scale-400.png" />
-    <None Remove="Assets\gamepulse-icone.targetsize-16.png" />
-    <None Remove="Assets\gamepulse-icone.targetsize-16_altform-lightunplated.png" />
-    <None Remove="Assets\gamepulse-icone.targetsize-16_altform-unplated.png" />
-    <None Remove="Assets\gamepulse-icone.targetsize-24.png" />
-    <None Remove="Assets\gamepulse-icone.targetsize-24_altform-lightunplated.png" />
-    <None Remove="Assets\gamepulse-icone.targetsize-24_altform-unplated.png" />
-    <None Remove="Assets\gamepulse-icone.targetsize-256.png" />
-    <None Remove="Assets\gamepulse-icone.targetsize-256_altform-lightunplated.png" />
-    <None Remove="Assets\gamepulse-icone.targetsize-256_altform-unplated.png" />
-    <None Remove="Assets\gamepulse-icone.targetsize-32.png" />
-    <None Remove="Assets\gamepulse-icone.targetsize-32_altform-lightunplated.png" />
-    <None Remove="Assets\gamepulse-icone.targetsize-32_altform-unplated.png" />
-    <None Remove="Assets\gamepulse-icone.targetsize-48.png" />
-    <None Remove="Assets\gamepulse-icone.targetsize-48_altform-lightunplated.png" />
-    <None Remove="Assets\gamepulse-icone.targetsize-48_altform-unplated.png" />
     <None Remove="Assets\Icones\minecraft-modern-icon.png" />
-    <None Remove="Assets\Icones\MinecraftTracker_icone.png" />
+    <None Remove="Assets\Icones\MinecraftTracker_icone.scale-100.png" />
+    <None Remove="Assets\Icones\MinecraftTracker_icone.scale-200.png" />
+    <None Remove="Assets\Icones\MinecraftTracker_icone.scale-400.png" />
+    <None Remove="Assets\Icones\MinecraftTracker_icone.targetsize-16.png" />
+    <None Remove="Assets\Icones\MinecraftTracker_icone.targetsize-16_altform-lightunplated.png" />
+    <None Remove="Assets\Icones\MinecraftTracker_icone.targetsize-16_altform-unplated.png" />
+    <None Remove="Assets\Icones\MinecraftTracker_icone.targetsize-256.png" />
+    <None Remove="Assets\Icones\MinecraftTracker_icone.targetsize-256_altform-lightunplated.png" />
+    <None Remove="Assets\Icones\MinecraftTracker_icone.targetsize-256_altform-unplated.png" />
+    <None Remove="Assets\Icones\MinecraftTracker_icone.targetsize-48.png" />
+    <None Remove="Assets\Icones\MinecraftTracker_icone.targetsize-48_altform-lightunplated.png" />
+    <None Remove="Assets\Icones\MinecraftTracker_icone.targetsize-48_altform-unplated.png" />
     <None Remove="Assets\Icones\minecraft_icone_javaedition.png" />
     <None Remove="Assets\Icones\trackstats-icone.png" />
+    <None Remove="Assets\logo-software.png" />
+    <None Remove="Assets\minecraftTracker-icone.scale-100.png" />
+    <None Remove="Assets\minecraftTracker-icone.scale-200.png" />
+    <None Remove="Assets\minecraftTracker-icone.scale-400.png" />
+    <None Remove="Assets\minecraftTracker-icone.targetsize-16.png" />
+    <None Remove="Assets\minecraftTracker-icone.targetsize-256.png" />
+    <None Remove="Assets\minecraftTracker-icone.targetsize-48.png" />
+    <None Remove="Assets\MinecraftTracker_icone.ico" />
 	<None Remove="Assets\minecraft_cover.jpg" />
 	<None Remove="Assets\minecraft-moderns-icon.png" />
-  </ItemGroup>
-
-  <ItemGroup>
-	  <Content Remove="Assets\trackstats-icone.ico" />
-	  <Content Remove="Assets\trackstats-icone.png" />
+	<None Remove="Assets\SplashScreen\SplashScreen.scale-100.png" />
+	<None Remove="Assets\SplashScreen\SplashScreen.scale-125.png" />
+	<None Remove="Assets\SplashScreen\SplashScreen.scale-150.png" />
+	<None Remove="Assets\SplashScreen\SplashScreen.scale-200.png" />
+	<None Remove="Assets\SplashScreen\SplashScreen.scale-400.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -85,13 +81,16 @@
     <Content Update="Assets\Icones\minecraft-modern-icon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Update="Assets\Icones\MinecraftTracker_icone.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
     <Content Update="Assets\Icones\minecraft_icone_javaedition.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Update="Assets\Icones\trackstats-icone.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Assets\logo-software.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Assets\MinecraftTracker_icone.ico">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
@@ -112,5 +111,6 @@
     <PublishTrimmed Condition="'$(Configuration)' == 'Debug'">False</PublishTrimmed>
     <PublishTrimmed Condition="'$(Configuration)' != 'Debug'">True</PublishTrimmed>
     <DefaultLanguage>pt-BR</DefaultLanguage>
+    <ApplicationIcon>Assets\Icones\MinecraftTracker_icone.ico</ApplicationIcon>
   </PropertyGroup>
 </Project>

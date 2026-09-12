@@ -128,9 +128,6 @@
                         Spacing="10"
                         Margin="16,0,0,0"
                         VerticalAlignment="Center">
-                <Border Width="24" Height="24" CornerRadius="6" Background="Transparent">
-                    <Image Source="/Assets/Icones/MinecraftTracker_icone.png" Width="32" Height="32" />
-                </Border>
                 <TextBlock VerticalAlignment="Center" FontSize="15" FontWeight="Bold">
                     <Run Text="Minecraft " Foreground="White" />
                     <Run Text="Tracker" Foreground="{StaticResource AccentGreenBrush}" />
@@ -179,7 +176,7 @@
             <NavigationView.PaneFooter>
                 <StackPanel Orientation="Horizontal" Spacing="10" Margin="12,12,12,16">
                     <Border Width="36" Height="36" CornerRadius="9" Background="{StaticResource CardBrushAlt}">
-                        <Image Source="/Assets/Icones/MinecraftTracker_icone.png" Width="32" Height="32" Stretch="Uniform" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        <Image Source="/Assets/Icones/MinecraftTracker_icone.png" Width="52" Height="52" Stretch="Uniform" HorizontalAlignment="Center" VerticalAlignment="Center" />
                     </Border>
                     <StackPanel VerticalAlignment="Center">
                         <TextBlock Text="MinecraftTracker" Foreground="{StaticResource TextPrimaryBrush}" FontSize="12" FontWeight="SemiBold" />
