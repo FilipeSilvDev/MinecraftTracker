@@ -10,46 +10,107 @@
         <MicaBackdrop Kind="BaseAlt" />
     </Window.SystemBackdrop>
 
-    <Grid x:Name="RootGrid" Background="#06080D">
+    <Grid x:Name="RootGrid" Background="#0A0D14">
 
         <Grid.Resources>
-            <!-- Paleta de Cores Minimalista Gamer -->
-            <SolidColorBrush x:Key="BgBrush" Color="#06080D" />
-            <SolidColorBrush x:Key="PaneBrush" Color="#0B0F19" />
-            <SolidColorBrush x:Key="CardBrush" Color="#111726" />
-            <SolidColorBrush x:Key="CardBrushAlt" Color="#161E30" />
-            <SolidColorBrush x:Key="BorderBrush1" Color="#1F2A40" />
-            <SolidColorBrush x:Key="AccentGreenBrush" Color="#00E676" />
-            <SolidColorBrush x:Key="TextPrimaryBrush" Color="#FAFAFA" />
-            <SolidColorBrush x:Key="TextSecondaryBrush" Color="#94A3B8" />
-            <SolidColorBrush x:Key="TextMutedBrush" Color="#64748B" />
 
-            <!-- Estilos Base -->
+            <!--  ===== Paleta (dark / gamer minimalista) =====  -->
+            <SolidColorBrush x:Key="BgBrush" Color="#0A0D14" />
+            <SolidColorBrush x:Key="PaneBrush" Color="#0D1119" />
+            <SolidColorBrush x:Key="CardBrush" Color="#11161F" />
+            <SolidColorBrush x:Key="CardBrushAlt" Color="#161C27" />
+            <SolidColorBrush x:Key="BorderBrush1" Color="#232B3A" />
+            <SolidColorBrush x:Key="AccentGreenBrush" Color="#2ECC71" />
+            <SolidColorBrush x:Key="AccentGreenDimBrush" Color="#173C29" />
+            <SolidColorBrush x:Key="AccentRedBrush" Color="#E5484D" />
+            <SolidColorBrush x:Key="TextPrimaryBrush" Color="#F2F5FA" />
+            <SolidColorBrush x:Key="TextSecondaryBrush" Color="#8B95A7" />
+            <SolidColorBrush x:Key="TextMutedBrush" Color="#5B6577" />
+
+            <!--  ===== Estilos compartilhados =====  -->
             <Style x:Key="CardStyle" TargetType="Border">
                 <Setter Property="Background" Value="{StaticResource CardBrush}" />
                 <Setter Property="BorderBrush" Value="{StaticResource BorderBrush1}" />
                 <Setter Property="BorderThickness" Value="1" />
-                <Setter Property="CornerRadius" Value="16" />
-                <Setter Property="Padding" Value="24" />
+                <Setter Property="CornerRadius" Value="14" />
+                <Setter Property="Padding" Value="22" />
             </Style>
 
             <Style x:Key="SectionTitleStyle" TargetType="TextBlock">
                 <Setter Property="Foreground" Value="{StaticResource TextPrimaryBrush}" />
-                <Setter Property="FontSize" Value="16" />
-                <Setter Property="FontWeight" Value="Bold" />
-                <Setter Property="CharacterSpacing" Value="25" />
+                <Setter Property="FontSize" Value="15" />
+                <Setter Property="FontWeight" Value="SemiBold" />
+            </Style>
+
+            <Style x:Key="EyebrowStyle" TargetType="TextBlock">
+                <Setter Property="Foreground" Value="{StaticResource TextMutedBrush}" />
+                <Setter Property="FontSize" Value="11" />
+                <Setter Property="FontWeight" Value="SemiBold" />
+                <Setter Property="CharacterSpacing" Value="60" />
             </Style>
 
             <Style x:Key="LabelStyle" TargetType="TextBlock">
                 <Setter Property="Foreground" Value="{StaticResource TextSecondaryBrush}" />
-                <Setter Property="FontSize" Value="12" />
-                <Setter Property="FontWeight" Value="Medium" />
+                <Setter Property="FontSize" Value="13" />
+            </Style>
+
+            <Style x:Key="MonoValueStyle" TargetType="TextBlock">
+                <Setter Property="FontFamily" Value="Consolas" />
+                <Setter Property="Foreground" Value="{StaticResource TextPrimaryBrush}" />
             </Style>
 
             <Style x:Key="NavIconStyle" TargetType="FontIcon">
                 <Setter Property="FontFamily" Value="Segoe Fluent Icons" />
-                <Setter Property="FontSize" Value="18" />
+                <Setter Property="FontSize" Value="16" />
             </Style>
+
+            <Style x:Key="AccentBarStyle" TargetType="Rectangle">
+                <Setter Property="Width" Value="3" />
+                <Setter Property="Height" Value="16" />
+                <Setter Property="RadiusX" Value="1.5" />
+                <Setter Property="RadiusY" Value="1.5" />
+                <Setter Property="Fill" Value="{StaticResource AccentGreenBrush}" />
+            </Style>
+
+            <!--  Item de sessão do histórico (data + intervalo + duração)  -->
+            <DataTemplate x:Key="SessionItemTemplate">
+                <Border BorderBrush="{StaticResource BorderBrush1}" BorderThickness="0,0,0,1" Padding="2,14">
+                    <Grid ColumnSpacing="14">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+
+                        <Border Grid.Column="0" Width="36" Height="36" CornerRadius="9" Background="{StaticResource CardBrushAlt}">
+                            <FontIcon FontFamily="Segoe Fluent Icons"
+                                      Glyph="&#xE787;"
+                                      FontSize="14"
+                                      Foreground="{StaticResource AccentGreenBrush}"
+                                      HorizontalAlignment="Center"
+                                      VerticalAlignment="Center" />
+                        </Border>
+
+                        <StackPanel Grid.Column="1" VerticalAlignment="Center" Spacing="3">
+                            <TextBlock Text="{Binding DateFormatted}" FontSize="14" FontWeight="SemiBold" Foreground="{StaticResource TextPrimaryBrush}" />
+                            <StackPanel Orientation="Horizontal" Spacing="6">
+                                <TextBlock Text="{Binding StartTimeFormatted}" FontFamily="Consolas" FontSize="12" Foreground="{StaticResource TextSecondaryBrush}" />
+                                <TextBlock Text="&#8594;" FontSize="12" Foreground="{StaticResource TextMutedBrush}" />
+                                <TextBlock Text="{Binding EndTimeFormatted}" FontFamily="Consolas" FontSize="12" Foreground="{StaticResource TextSecondaryBrush}" />
+                            </StackPanel>
+                        </StackPanel>
+
+                        <TextBlock Grid.Column="2"
+                                   Text="{Binding DurationFormatted}"
+                                   FontFamily="Consolas"
+                                   FontSize="15"
+                                   FontWeight="Bold"
+                                   Foreground="{StaticResource AccentGreenBrush}"
+                                   VerticalAlignment="Center" />
+                    </Grid>
+                </Border>
+            </DataTemplate>
+
         </Grid.Resources>
 
         <Grid.RowDefinitions>
@@ -57,38 +118,48 @@
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
-        <!-- BARRA DE TÍTULO -->
-        <Grid x:Name="AppTitleBar" Grid.Row="0" Background="Transparent">
-            <StackPanel Orientation="Horizontal" Spacing="12" Margin="20,0,0,0" VerticalAlignment="Center">
+        <!--  ============ BARRA DE TÍTULO CUSTOMIZADA ============  -->
+        <Border x:Name="AppTitleBar"
+                Grid.Row="0"
+                Background="{StaticResource PaneBrush}"
+                BorderBrush="{StaticResource BorderBrush1}"
+                BorderThickness="0,0,0,1">
+            <StackPanel Orientation="Horizontal"
+                        Spacing="10"
+                        Margin="16,0,0,0"
+                        VerticalAlignment="Center">
                 <Border Width="24" Height="24" CornerRadius="6" Background="Transparent">
-                    <Image Source="/Assets/Icones/trackstats-icone.png" />
+                    <Image Source="/Assets/Icones/MinecraftTracker_icone.png" Width="32" Height="32" />
                 </Border>
-                <TextBlock VerticalAlignment="Center" FontSize="14" FontWeight="SemiBold" CharacterSpacing="20">
-                    <Run Text="TRACKER" Foreground="{StaticResource TextPrimaryBrush}" />
-                    <Run Text="GAMES" Foreground="{StaticResource AccentGreenBrush}" />
+                <TextBlock VerticalAlignment="Center" FontSize="15" FontWeight="Bold">
+                    <Run Text="Minecraft " Foreground="White" />
+                    <Run Text="Tracker" Foreground="{StaticResource AccentGreenBrush}" />
                 </TextBlock>
-                <Rectangle Width="1" Height="14" Fill="{StaticResource BorderBrush1}" Margin="8,0" />
-                <TextBlock Text="MINECRAFT" Foreground="{StaticResource TextMutedBrush}" FontSize="12" FontWeight="SemiBold" VerticalAlignment="Center" CharacterSpacing="50" />
+                <Rectangle Width="1" Height="16" Fill="{StaticResource BorderBrush1}" Margin="4,0" />
+                <!--  TODO: tornar dinâmico e refletir o jogo detectado  -->
+                <TextBlock Text="Minecraft" Foreground="{StaticResource TextSecondaryBrush}" FontSize="13" VerticalAlignment="Center" />
             </StackPanel>
-        </Grid>
+        </Border>
 
-        <!-- NAVEGAÇÃO -->
+        <!--  ============ NAVIGATIONVIEW (SHELL PRINCIPAL) ============  -->
         <NavigationView x:Name="MainNav"
-                        Grid.Row="1"
-                        IsBackButtonVisible="Collapsed"
-                        IsSettingsVisible="False"
-                        OpenPaneLength="220"
-                        PaneDisplayMode="LeftCompact"
-                        Background="Transparent"
-                        SelectionChanged="MainNav_SelectionChanged">
+                         Grid.Row="1"
+                         IsBackButtonVisible="Collapsed"
+                         IsSettingsVisible="False"
+                         IsTitleBarAutoPaddingEnabled="False"
+                         OpenPaneLength="230"
+                         CompactPaneLength="56"
+                         PaneDisplayMode="LeftCompact"
+                         Background="{StaticResource BgBrush}"
+                         SelectionChanged="MainNav_SelectionChanged">
 
             <NavigationView.Resources>
-                <SolidColorBrush x:Key="NavigationViewDefaultPaneBackground" Color="#0B0F19" />
-                <SolidColorBrush x:Key="NavigationViewSelectionIndicatorForeground" Color="#00E676" />
+                <SolidColorBrush x:Key="NavigationViewDefaultPaneBackground" Color="#0D1119" />
+                <SolidColorBrush x:Key="NavigationViewSelectionIndicatorForeground" Color="#2ECC71" />
             </NavigationView.Resources>
 
             <NavigationView.MenuItems>
-                <NavigationViewItem Content="Dashboard" IsSelected="True" Tag="home">
+                <NavigationViewItem Content="Início" IsSelected="True" Tag="home">
                     <NavigationViewItem.Icon>
                         <FontIcon Style="{StaticResource NavIconStyle}" Glyph="&#xE80F;" />
                     </NavigationViewItem.Icon>
@@ -98,133 +169,144 @@
                         <FontIcon Style="{StaticResource NavIconStyle}" Glyph="&#xE9D9;" />
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
-                <NavigationViewItem Content="Ajustes" Tag="settings">
+                <NavigationViewItem Content="Configurações" Tag="settings">
                     <NavigationViewItem.Icon>
                         <FontIcon Style="{StaticResource NavIconStyle}" Glyph="&#xE713;" />
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
             </NavigationView.MenuItems>
 
-            <!-- CONTEÚDO PRINCIPAL -->
-            <ScrollViewer Padding="32" VerticalScrollBarVisibility="Auto">
-                <StackPanel MaxWidth="900" HorizontalAlignment="Left" Spacing="24">
+            <NavigationView.PaneFooter>
+                <StackPanel Orientation="Horizontal" Spacing="10" Margin="12,12,12,16">
+                    <Border Width="36" Height="36" CornerRadius="9" Background="{StaticResource CardBrushAlt}">
+                        <Image Source="/Assets/Icones/MinecraftTracker_icone.png" Width="32" Height="32" Stretch="Uniform" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                    </Border>
+                    <StackPanel VerticalAlignment="Center">
+                        <TextBlock Text="MinecraftTracker" Foreground="{StaticResource TextPrimaryBrush}" FontSize="12" FontWeight="SemiBold" />
+                        <TextBlock Text="Acompanhe seu tempo de jogo." Foreground="{StaticResource TextMutedBrush}" FontSize="10" />
+                    </StackPanel>
+                </StackPanel>
+            </NavigationView.PaneFooter>
 
-                    <!-- HERO: Perfil do Jogo -->
-                    <Grid>
+            <!--  ============ CONTEÚDO PRINCIPAL ============  -->
+            <ScrollViewer Padding="40,32,40,40" VerticalScrollBarVisibility="Auto">
+                <StackPanel MaxWidth="1040" HorizontalAlignment="Stretch" Spacing="24">
+
+                    <!--  Cabeçalho do jogo  -->
+                    <Grid ColumnSpacing="18">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="Auto"/>
-                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*" />
                         </Grid.ColumnDefinitions>
-                        <Border Grid.Column="0" Width="80" Height="80" CornerRadius="20" Background="{StaticResource CardBrushAlt}" BorderBrush="{StaticResource BorderBrush1}" BorderThickness="1" Margin="0,0,24,0">
-                            <Image Source="/Assets/Icones/minecraft-modern-icon.png" Width="48" Height="48" />
+                        <Border Grid.Column="0" Width="64" Height="64" CornerRadius="16" Background="{StaticResource CardBrushAlt}" BorderBrush="{StaticResource BorderBrush1}" BorderThickness="1">
+                            <Image Source="/Assets/Icones/minecraft-modern-icon.png" Width="62" Height="62" Stretch="Uniform" HorizontalAlignment="Center" VerticalAlignment="Center" />
                         </Border>
-                        <StackPanel Grid.Column="1" VerticalAlignment="Center" Spacing="6">
-                            <TextBlock Text="Minecraft Java Edition" Foreground="{StaticResource TextPrimaryBrush}" FontSize="28" FontWeight="Bold" />
-                            <TextBlock Foreground="{StaticResource TextSecondaryBrush}" FontSize="14" TextWrapping="Wrap" MaxWidth="600" HorizontalAlignment="Left">
-                                Monitoramento em tempo real. O Tracker Games detecta a execução em segundo plano e registra suas métricas de sessão automaticamente.
+                        <StackPanel Grid.Column="1" VerticalAlignment="Center" Spacing="4">
+                            <TextBlock Text="Minecraft" FontSize="26" FontWeight="Bold" Foreground="{StaticResource TextPrimaryBrush}" />
+                            <TextBlock Foreground="{StaticResource TextSecondaryBrush}" FontSize="13" TextWrapping="Wrap" MaxWidth="620">
+                                Acompanhe o tempo de jogo automaticamente. O Minecraft Tracker detecta quando o jogo está em execução e inicia a contagem.
                             </TextBlock>
                         </StackPanel>
                     </Grid>
 
-                    <!-- PAINEL DA SESSÃO ATUAL -->
-                    <Border Style="{StaticResource CardStyle}" Background="{StaticResource PaneBrush}">
-                        <Grid>
+                    <!--  Card em destaque: Sessão atual  -->
+                    <Border Background="{StaticResource CardBrush}"
+                            BorderBrush="{Binding StatusBrush}"
+                            BorderThickness="1.5"
+                            CornerRadius="16"
+                            Padding="26,22">
+                        <Grid ColumnSpacing="24">
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="Auto" />
                             </Grid.ColumnDefinitions>
 
-                            <!-- Status -->
-                            <StackPanel Grid.Column="0" VerticalAlignment="Center" Spacing="12">
-                                <TextBlock Text="STATUS DO SISTEMA" Style="{StaticResource LabelStyle}" />
+                            <StackPanel Grid.Column="0" Spacing="14" VerticalAlignment="Center">
+                                <StackPanel Orientation="Horizontal" Spacing="10">
+                                    <Rectangle Style="{StaticResource AccentBarStyle}" />
+                                    <TextBlock Text="STATUS DO JOGO" Style="{StaticResource EyebrowStyle}" />
+                                </StackPanel>
+
                                 <StackPanel Orientation="Horizontal" Spacing="12">
-                                    <Border Background="{StaticResource CardBrushAlt}" BorderBrush="{Binding StatusBrush}" BorderThickness="1" CornerRadius="8" Padding="12,8">
-                                        <StackPanel Orientation="Horizontal" Spacing="8">
-                                            <FontIcon FontFamily="Segoe Fluent Icons" Glyph="{Binding StatusGlyph}" FontSize="12" Foreground="{Binding StatusBrush}" />
-                                            <TextBlock Text="{Binding StatusText}" Foreground="{Binding StatusBrush}" FontWeight="SemiBold" FontSize="13" />
-                                        </StackPanel>
+                                    <Border Width="46" Height="46" CornerRadius="11" Background="{StaticResource CardBrushAlt}">
+                                        <Image Source="/Assets/Icones/minecraft_icone_javaedition.png" Width="38" Height="38" Stretch="Uniform" HorizontalAlignment="Center" VerticalAlignment="Center" />
                                     </Border>
-                                    <StackPanel VerticalAlignment="Center" Orientation="Horizontal" Spacing="6">
-                                        <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE916;" FontSize="12" Foreground="{StaticResource TextMutedBrush}" />
-                                        <TextBlock Text="Captura Automática Ativa" FontSize="12" Foreground="{StaticResource TextMutedBrush}" />
+                                    <StackPanel VerticalAlignment="Center" Spacing="6">
+                                        <TextBlock Text="Minecraft Java Edition" FontSize="15" FontWeight="SemiBold" Foreground="{StaticResource TextPrimaryBrush}" />
+                                        <Border BorderBrush="{Binding StatusBrush}" BorderThickness="1" CornerRadius="12" Padding="10,4" HorizontalAlignment="Left">
+                                            <StackPanel Orientation="Horizontal" Spacing="6">
+                                                <FontIcon FontFamily="Segoe Fluent Icons" Glyph="{Binding StatusGlyph}" FontSize="10" Foreground="{Binding StatusBrush}" />
+                                                <TextBlock Text="{Binding StatusText}" FontSize="12" FontWeight="Medium" Foreground="{Binding StatusBrush}" />
+                                            </StackPanel>
+                                        </Border>
                                     </StackPanel>
                                 </StackPanel>
                             </StackPanel>
 
-                            <!-- Timer -->
-                            <StackPanel Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Right">
-                                <TextBlock Text="TEMPO DA SESSÃO" Style="{StaticResource LabelStyle}" HorizontalAlignment="Right" Margin="0,0,0,4" />
+                            <!--  Temporizador da sessão atual  -->
+                            <StackPanel Grid.Column="1" Spacing="6" HorizontalAlignment="Right" VerticalAlignment="Center">
+                                <TextBlock Text="TEMPO DESTA SESSÃO" Style="{StaticResource EyebrowStyle}" HorizontalAlignment="Right" />
                                 <TextBlock x:Name="CurrentSessionTimeText"
                                            Text="{Binding RunningGameTime}"
-                                           Foreground="{StaticResource TextPrimaryBrush}"
+                                           Foreground="{Binding StatusBrush}"
+                                           FontFamily="Consolas"
                                            FontSize="42"
                                            FontWeight="Bold"
-                                           FontFamily="Consolas"
                                            HorizontalAlignment="Right" />
                             </StackPanel>
                         </Grid>
                     </Border>
 
-                    <!-- CARDS DE ESTATÍSTICAS -->
-                    <Grid ColumnSpacing="24">
+                    <!--  Estatísticas rápidas  -->
+                    <Grid ColumnSpacing="20">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="*" />
                             <ColumnDefinition Width="*" />
                         </Grid.ColumnDefinitions>
 
-                        <!-- Total Playtime -->
                         <Border Grid.Column="0" Style="{StaticResource CardStyle}">
-                            <StackPanel Spacing="16">
-                                <StackPanel Orientation="Horizontal" Spacing="8">
-                                    <Border Background="{StaticResource CardBrushAlt}" CornerRadius="6" Padding="6">
-                                        <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE823;" FontSize="14" Foreground="{StaticResource TextSecondaryBrush}" />
-                                    </Border>
-                                    <TextBlock Text="TEMPO TOTAL JOGADO" Style="{StaticResource LabelStyle}" VerticalAlignment="Center" />
+                            <StackPanel Orientation="Horizontal" Spacing="16">
+                                <Border Width="44" Height="44" CornerRadius="11" Background="{StaticResource CardBrushAlt}">
+                                    <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE823;" FontSize="18" Foreground="{StaticResource AccentGreenBrush}" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                </Border>
+                                <StackPanel>
+                                    <TextBlock Text="Tempo total jogado" Style="{StaticResource LabelStyle}" />
+                                    <TextBlock Text="{Binding TotalPlayTime}" Style="{StaticResource MonoValueStyle}" FontSize="24" FontWeight="Bold" />
                                 </StackPanel>
-                                <TextBlock Text="{Binding TotalPlayTime}" FontSize="32" FontWeight="Bold" Foreground="{StaticResource TextPrimaryBrush}" />
                             </StackPanel>
                         </Border>
 
-                        <!-- Today Playtime -->
                         <Border Grid.Column="1" Style="{StaticResource CardStyle}">
-                            <StackPanel Spacing="16">
-                                <StackPanel Orientation="Horizontal" Spacing="8">
-                                    <Border Background="{StaticResource CardBrushAlt}" CornerRadius="6" Padding="6">
-                                        <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE787;" FontSize="14" Foreground="{StaticResource TextSecondaryBrush}" />
-                                    </Border>
-                                    <TextBlock Text="JOGADO HOJE" Style="{StaticResource LabelStyle}" VerticalAlignment="Center" />
+                            <StackPanel Orientation="Horizontal" Spacing="16">
+                                <Border Width="44" Height="44" CornerRadius="11" Background="{StaticResource CardBrushAlt}">
+                                    <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE787;" FontSize="18" Foreground="{StaticResource AccentGreenBrush}" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                </Border>
+                                <StackPanel>
+                                    <TextBlock Text="Jogado hoje" Style="{StaticResource LabelStyle}" />
+                                    <TextBlock Text="{Binding TodayPlayTime}" Style="{StaticResource MonoValueStyle}" FontSize="24" FontWeight="Bold" />
                                 </StackPanel>
-                                <TextBlock Text="{Binding TodayPlayTime}" FontSize="32" FontWeight="Bold" Foreground="{StaticResource TextPrimaryBrush}" />
                             </StackPanel>
                         </Border>
                     </Grid>
 
-                    <!-- HISTÓRICO DE SESSÕES -->
+                    <!--  Histórico de sessões  -->
                     <Border Style="{StaticResource CardStyle}">
-                        <StackPanel Spacing="20">
-                            <TextBlock Text="HISTÓRICO RECENTE" Style="{StaticResource SectionTitleStyle}" />
+                        <StackPanel Spacing="16">
+                            <StackPanel Orientation="Horizontal" Spacing="10">
+                                <Rectangle Style="{StaticResource AccentBarStyle}" />
+                                <TextBlock Text="Histórico de Sessões" Style="{StaticResource SectionTitleStyle}" />
+                            </StackPanel>
 
-                            <ListView ItemsSource="{Binding RecentSessions}" SelectionMode="None" Background="Transparent">
-                                <ListView.ItemTemplate>
-                                    <DataTemplate>
-                                        <Border BorderBrush="{StaticResource BorderBrush1}" BorderThickness="0,0,0,1" Padding="4,12,4,12">
-                                            <Grid ColumnDefinitions="*, Auto">
-                                                <StackPanel Grid.Column="0" VerticalAlignment="Center" Spacing="4">
-                                                    <TextBlock Text="{Binding DateFormatted}" FontWeight="SemiBold" FontSize="14" Foreground="{StaticResource TextPrimaryBrush}" />
-                                                    <StackPanel Orientation="Horizontal" Spacing="6">
-                                                        <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE823;" FontSize="10" Foreground="{StaticResource TextMutedBrush}" />
-                                                        <TextBlock Text="{Binding StartTimeFormatted}" FontSize="12" Foreground="{StaticResource TextSecondaryBrush}" />
-                                                        <TextBlock Text="—" FontSize="12" Foreground="{StaticResource TextMutedBrush}" />
-                                                        <TextBlock Text="{Binding EndTimeFormatted}" FontSize="12" Foreground="{StaticResource TextSecondaryBrush}" />
-                                                    </StackPanel>
-                                                </StackPanel>
-                                                <Border Grid.Column="1" Background="{StaticResource CardBrushAlt}" CornerRadius="6" Padding="12,6" VerticalAlignment="Center">
-                                                    <TextBlock Text="{Binding DurationFormatted}" FontWeight="Bold" FontSize="13" Foreground="{StaticResource AccentGreenBrush}" />
-                                                </Border>
-                                            </Grid>
-                                        </Border>
-                                    </DataTemplate>
-                                </ListView.ItemTemplate>
+                            <ListView ItemsSource="{Binding RecentSessions}"
+                                      ItemTemplate="{StaticResource SessionItemTemplate}"
+                                      SelectionMode="None">
+                                <ListView.ItemContainerStyle>
+                                    <Style TargetType="ListViewItem">
+                                        <Setter Property="Padding" Value="0" />
+                                        <Setter Property="MinHeight" Value="0" />
+                                        <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+                                    </Style>
+                                </ListView.ItemContainerStyle>
                             </ListView>
                         </StackPanel>
                     </Border>

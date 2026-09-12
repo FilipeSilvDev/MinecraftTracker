@@ -21,12 +21,11 @@ namespace TrackerGames
         public MainWindow()
         {
             this.InitializeComponent();
-            AppWindow.Resize(new Windows.Graphics.SizeInt32(810, 750));
-            OverlappedPresenter presenter = OverlappedPresenter.Create();
-
-            presenter.IsResizable = false;
             SetupCustomTitleBar();
             TrySetCustomIcon();
+            AppWindow.Resize(new Windows.Graphics.SizeInt32(810, 750));
+            OverlappedPresenter presenter = OverlappedPresenter.Create();
+            presenter.IsResizable = false;
 
             // Window (WinUI3) não tem DataContext; atribuir ao elemento raiz do XAML
             if (this.Content is FrameworkElement root)
@@ -40,7 +39,6 @@ namespace TrackerGames
                 fallbackGrid.DataContext = new MainViewModel();
                 this.Content = fallbackGrid;
             }
-
             AppWindow.SetPresenter(presenter);
         }
 
@@ -75,9 +73,19 @@ namespace TrackerGames
             // (args.SelectedItemContainer as NavigationViewItem)?.Tag
         }
 
+        private void StopButton_Click(object sender, RoutedEventArgs e)
+        {
+            // TODO: parar o rastreamento (deteção do processo do jogo)
+        }
+
+        private void StartButton_Click(object sender, RoutedEventArgs e)
+        {
+            // TODO: iniciar o rastreamento (detecção do processo do jogo)
+        }
+
         private void ClearHistoryButton_Click(object sender, RoutedEventArgs e)
         {
-            // TODO: limpar histórico de sessões (banco SQLite)
+            // TODO: limpar histórico de sessães (banco SQLite)
         }
     }
 
@@ -91,7 +99,7 @@ namespace TrackerGames
         private string _todayPlayTime = "0h 0m"; // Inicio das horas hoje
         public ObservableCollection<GameSession> RecentSessions { get; } = new();
         public string StatusText => IsGameRunning ? "Executando" : "Não detectado";
-        public string StatusGlyph => IsGameRunning ? "\uE768" : "\uE71A"; // Ícones Fluent Segoe
+        public string StatusGlyph => IsGameRunning ? "\uE768" : "\uE769"; // Ícones Fluent Segoe
         public Brush StatusBrush => IsGameRunning
             ? new SolidColorBrush(Windows.UI.Color.FromArgb(255, 16, 124, 65))  // #107C41 (Verde)
             : new SolidColorBrush(Windows.UI.Color.FromArgb(255, 138, 136, 134)); // #8A8886 (Cinza)
@@ -182,7 +190,7 @@ namespace TrackerGames
                     }
                     catch
                     {
-                        // Evita exceção se o processo for fechado durante a verificação
+                        // Evita exceção se o processo for fechado durante a verifição
                     }
                 }
 
@@ -220,7 +228,7 @@ namespace TrackerGames
             {
                 _gameStopwatch.Stop();
 
-                // Gravar a sessão apenas se ela durar mais de 30 segundos (evita falso alertas)
+                // Gravar a sessão apenas se ela durar mais de 5 segundos (evita falso alertas)
                 if (_gameStopwatch.Elapsed.TotalSeconds >= 30)
                 {
                     var session = new GameSession
@@ -231,7 +239,7 @@ namespace TrackerGames
                     };
 
                     await DatabaseService.SaveSessionAsync(session);
-                    await LoadDashboardStatsAsync(); // Recarrega estatísticas na UI
+                    await LoadDashboardStatsAsync(); // Recarrega estatásticas na UI
                 }
 
                 _gameStopwatch.Reset();

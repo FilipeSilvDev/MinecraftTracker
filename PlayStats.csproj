@@ -24,6 +24,7 @@
     <Content Remove="Assets\gamepulse-icone.altform-unplated_targetsize-32.png" />
     <Content Remove="Assets\gamepulse-icone.altform-unplated_targetsize-48.png" />
     <Content Remove="Assets\minecraft_cover.jpg" />
+    <Content Remove="Assets\Sounds\levelup_sound.wav" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="Assets\Covers\minecraft_cover.png" />
@@ -48,6 +49,8 @@
     <None Remove="Assets\gamepulse-icone.targetsize-48_altform-lightunplated.png" />
     <None Remove="Assets\gamepulse-icone.targetsize-48_altform-unplated.png" />
     <None Remove="Assets\Icones\minecraft-modern-icon.png" />
+    <None Remove="Assets\Icones\MinecraftTracker_icone.png" />
+    <None Remove="Assets\Icones\minecraft_icone_javaedition.png" />
     <None Remove="Assets\Icones\trackstats-icone.png" />
 	<None Remove="Assets\minecraft_cover.jpg" />
 	<None Remove="Assets\minecraft-moderns-icon.png" />
@@ -80,6 +83,12 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Update="Assets\Icones\minecraft-modern-icon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Assets\Icones\MinecraftTracker_icone.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Assets\Icones\minecraft_icone_javaedition.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Update="Assets\Icones\trackstats-icone.png">
