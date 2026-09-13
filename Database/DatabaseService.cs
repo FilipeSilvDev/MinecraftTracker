@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Runtime.InteropServices;
 using System.Threading.Tasks;
 using Microsoft.Data.Sqlite;
+using Windows.Storage;
 
-namespace TrackerGames
+namespace MinecraftTrackerApp
 {
     public class GameSession
     {
@@ -23,8 +25,48 @@ namespace TrackerGames
 
     public class DatabaseService
     {
-        private static readonly string DbPath = Path.Combine(AppContext.BaseDirectory, "game_tracker.db");
-        private static readonly string ConnectionString = $"Data Source={DbPath}";
+       private static bool IsPackaged()
+        {
+            try
+            {
+                int length = 0; // Tenta recuperar a identidade da aplicacão via API nativa
+                return GetCurrentPackageFullName(ref length, null) != 15700; // 15700 = APPMODEL_ERRO_NO_PACKAGE
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        [DllImport("kernel32.dll", CharSet = CharSet.Unicode, SetLastError = true)]
+        private static extern int GetCurrentPackageFullName(ref int packageFullNameLength, System.Text.StringBuilder? packageFullName);
+
+        private static string GetDatabasePath()
+        {
+            string folderPath;
+            if (IsPackaged())
+            {
+                folderPath = ApplicationData.Current.LocalFolder.Path;
+            }
+            else
+            {
+                folderPath = AppDataPath();
+            }
+
+            return Path.Combine(folderPath, "game_tracker.db");
+        }
+
+        private static string AppDataPath()
+        {
+            string path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "MinecraftTrackerApp");
+            if (!Directory.Exists(path))
+            {
+                Directory.CreateDirectory(path);
+            }
+            return path;
+        }
+
+        private static string ConnectionString => $"Data Source={GetDatabasePath()}";
 
         public static async Task InitializeDatabaseAsync()
         {

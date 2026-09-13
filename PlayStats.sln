@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.14.37614.0
+# Visual Studio Version 18
+VisualStudioVersion = 18.10.12201.205 stable
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlayStats", "PlayStats.csproj", "{D129F6DF-BDBB-4372-BEA7-02BA4FDF64CD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MinecraftTracker", "MinecraftTracker.csproj", "{D129F6DF-BDBB-4372-BEA7-02BA4FDF64CD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

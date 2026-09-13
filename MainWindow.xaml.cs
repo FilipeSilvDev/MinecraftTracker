@@ -10,35 +10,42 @@ using Microsoft.UI.Windowing;
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml.Media;
+using Windows.Media.Core;
+using Windows.Media.Playback;
 using WinRT.Interop;
 
-namespace TrackerGames
+namespace MinecraftTrackerApp
 {
     public sealed partial class MainWindow : Window
     {
         private AppWindow? _appWindow;
+        private MediaPlayer? _mediaPlayer;
 
         public MainWindow()
         {
             this.InitializeComponent();
             SetupCustomTitleBar();
-            TrySetCustomIcon();
+
+            try { TrySetCustomIcon(); } catch { /* Apenas para evitar de fechar em caso de erro */ }
+            try { PlayStartUpAudio(); } catch { /* Apenas para evitar de fechar em caso de erro */ }
+
             AppWindow.Resize(new Windows.Graphics.SizeInt32(810, 750));
             OverlappedPresenter presenter = OverlappedPresenter.Create();
             presenter.IsResizable = false;
 
-            // Window (WinUI3) não tem DataContext; atribuir ao elemento raiz do XAML
-            if (this.Content is FrameworkElement root)
+            try
             {
-                root.DataContext = new MainViewModel();
+                var viewModel = new MainViewModel();
+                if (this.Content is FrameworkElement root)
+                {
+                    root.DataContext = viewModel;
+                }
             }
-            else
+            catch (Exception ex)
             {
-                // Fallback seguro: cria um Grid e define como Content com o DataContext
-                var fallbackGrid = new Grid();
-                fallbackGrid.DataContext = new MainViewModel();
-                this.Content = fallbackGrid;
+                System.Diagnostics.Debug.WriteLine($"Erro ao carregar ViewModel: {ex.Message}");
             }
+
             AppWindow.SetPresenter(presenter);
         }
 
@@ -65,6 +72,14 @@ namespace TrackerGames
                 string iconPath = System.IO.Path.Combine(AppContext.BaseDirectory, "Assets", "MinecraftTracker_icone.ico");
                 appWindow.SetIcon(iconPath);
             }
+        }
+
+        private void PlayStartUpAudio()
+        {
+            _mediaPlayer = new MediaPlayer();
+            var uri = new Uri("ms-appx:///Assets/Sounds/startup.wav");
+            _mediaPlayer.Source = MediaSource.CreateFromUri(uri);
+            _mediaPlayer.Play();
         }
 
         private void MainNav_SelectionChanged(NavigationView sender, NavigationViewSelectionChangedEventArgs args)

@@ -10,7 +10,7 @@
 
   <Identity
     Name="b287b0ff-de47-460a-afda-f766a2952e54"
-    Publisher="CN=sanzi"
+    Publisher="CN=Filipe.dev"
     Version="0.9.0.0" />
 
   <mp:PhoneIdentity PhoneProductId="b287b0ff-de47-460a-afda-f766a2952e54" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
@@ -33,7 +33,7 @@
   <Applications>
     <Application Id="App"
       Executable="$targetnametoken$.exe"
-      EntryPoint="$targetentrypoint$" uap18:TrustLevel="appContainer" uap18:RuntimeBehavior="windowsApp">
+      EntryPoint="$targetentrypoint$" >
       <uap:VisualElements
         DisplayName="MinecraftTracker"
         Description="MinecraftTracker um software de monitoramento de tempo jogando Minecraft"

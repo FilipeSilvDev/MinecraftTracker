@@ -1,22 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
-using System.Threading.Tasks;
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
-using Microsoft.UI.Xaml.Controls.Primitives;
-using Microsoft.UI.Xaml.Data;
-using Microsoft.UI.Xaml.Input;
-using Microsoft.UI.Xaml.Media;
-using Microsoft.UI.Xaml.Navigation;
-using Microsoft.UI.Xaml.Shapes;
-using TrackerGames;
-using Windows.ApplicationModel;
-using Windows.ApplicationModel.Activation;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
+using MinecraftTrackerApp;
 
 // To learn more about WinUI, the WinUI project structure,
 // and more about our project templates, see: http://aka.ms/winui-project-info.
@@ -45,9 +30,25 @@ namespace MinecraftTracker
         /// <param name="args">Details about the launch request and process.</param>
         protected override async void OnLaunched(Microsoft.UI.Xaml.LaunchActivatedEventArgs args)
         {
-            await DatabaseService.InitializeDatabaseAsync();
             _window = new MainWindow();
             _window.Activate();
+
+            // Instância o banco de dados
+            try
+            {
+                await DatabaseService.InitializeDatabaseAsync();
+            }
+            catch (Exception ex)
+            {
+                ContentDialog errorDialog = new ContentDialog
+                {
+                    Title = "Erro ao inicializar o banco de dados",
+                    Content = $"Ocorreu um erro ao inicializar o banco de dados: {ex.Message}",
+                    CloseButtonText = "OK",
+                    XamlRoot = _window.Content.XamlRoot
+                };
+                await errorDialog.ShowAsync();
+            }
         }
     }
 }

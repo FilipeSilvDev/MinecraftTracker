@@ -2,6 +2,8 @@
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
     <TargetFramework>net8.0-windows10.0.19041.0</TargetFramework>
+	<WindowsPackageType>None</WindowsPackageType>
+	<WindowsAppSKDSelfContained>true</WindowsAppSKDSelfContained>
     <TargetPlatformMinVersion>10.0.17763.0</TargetPlatformMinVersion>
     <RootNamespace>MinecraftTracker</RootNamespace>
     <ApplicationManifest>app.manifest</ApplicationManifest>
@@ -13,6 +15,12 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Remove="BundleArtifacts\**" />
+    <EmbeddedResource Remove="BundleArtifacts\**" />
+    <None Remove="BundleArtifacts\**" />
+    <Page Remove="BundleArtifacts\**" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Remove="Assets\minecraftTracker-icone.altform-lightunplated_targetsize-16.png" />
     <Content Remove="Assets\minecraftTracker-icone.altform-lightunplated_targetsize-256.png" />
     <Content Remove="Assets\minecraftTracker-icone.altform-lightunplated_targetsize-48.png" />
@@ -20,7 +28,6 @@
     <Content Remove="Assets\minecraftTracker-icone.altform-unplated_targetsize-256.png" />
     <Content Remove="Assets\minecraftTracker-icone.altform-unplated_targetsize-48.png" />
     <Content Remove="Assets\minecraft_cover.jpg" />
-    <Content Remove="Assets\Sounds\levelup_sound.wav" />
     <Content Remove="Assets\SplashScreen_Base.png" />
   </ItemGroup>
   <ItemGroup>
@@ -50,6 +57,7 @@
     <None Remove="Assets\MinecraftTracker_icone.ico" />
 	<None Remove="Assets\minecraft_cover.jpg" />
 	<None Remove="Assets\minecraft-moderns-icon.png" />
+	<None Remove="Assets\Sounds\startup.wav" />
 	<None Remove="Assets\SplashScreen\SplashScreen.scale-100.png" />
 	<None Remove="Assets\SplashScreen\SplashScreen.scale-125.png" />
 	<None Remove="Assets\SplashScreen\SplashScreen.scale-150.png" />
@@ -93,6 +101,9 @@
     <Content Update="Assets\MinecraftTracker_icone.ico">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Update="Assets\Sounds\startup.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
   <!--
@@ -109,8 +120,20 @@
     <PublishReadyToRun Condition="'$(Configuration)' == 'Debug'">False</PublishReadyToRun>
     <PublishReadyToRun Condition="'$(Configuration)' != 'Debug'">True</PublishReadyToRun>
     <PublishTrimmed Condition="'$(Configuration)' == 'Debug'">False</PublishTrimmed>
-    <PublishTrimmed Condition="'$(Configuration)' != 'Debug'">True</PublishTrimmed>
+    <PublishTrimmed>False</PublishTrimmed>
     <DefaultLanguage>pt-BR</DefaultLanguage>
     <ApplicationIcon>Assets\Icones\MinecraftTracker_icone.ico</ApplicationIcon>
+    <GenerateAppInstallerFile>False</GenerateAppInstallerFile>
+    <AppxPackageSigningEnabled>True</AppxPackageSigningEnabled>
+    <PackageCertificateThumbprint>A0F2521343C039F574EC53893B705C959EC48B9D</PackageCertificateThumbprint>
+    <AppxPackageSigningTimestampDigestAlgorithm>SHA256</AppxPackageSigningTimestampDigestAlgorithm>
+    <AppxAutoIncrementPackageRevision>False</AppxAutoIncrementPackageRevision>
+    <GenerateTestArtifacts>True</GenerateTestArtifacts>
+    <AppxBundle>Auto</AppxBundle>
+    <HoursBetweenUpdateChecks>0</HoursBetweenUpdateChecks>
+    <AppxBundlePlatforms>x86|x64</AppxBundlePlatforms>
   </PropertyGroup>
+  <ItemGroup>
+    <PRIResource Remove="BundleArtifacts\**" />
+  </ItemGroup>
 </Project>
