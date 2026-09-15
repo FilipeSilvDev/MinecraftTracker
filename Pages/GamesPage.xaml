@@ -36,7 +36,12 @@
                     </StackPanel>
 
                     <StackPanel Grid.Column="2" Orientation="Horizontal" Spacing="8" VerticalAlignment="Center">
-                        <Button Content="Iniciar" Style="{StaticResource PrimaryButtonStyle}" Tag="{Binding}" Click="LaunchButton_Click" />
+                        <Button Content="Iniciar" Style="{StaticResource AccentGreenBrush}" Tag="{Binding}" Click="LaunchButton_Click" />
+                        <Button Content="Fechar"
+                                Style="{StaticResource DangerButtonStyle}"
+                                Tag="{Binding}"
+                                IsEnabled="{Binding IsRunning}"
+                                Click="CloseGameButton_Click" />
                         <Button Content="Remover" Style="{StaticResource DangerButtonStyle}" Tag="{Binding}" Click="RemoveButton_Click" />
                     </StackPanel>
                 </Grid>
@@ -60,7 +65,7 @@
                 <Button Grid.Column="1"
                         x:Name="AddGameButton"
                         Content="+ Adicionar jogo"
-                        Style="{StaticResource PrimaryButtonStyle}"
+                        Foreground="{StaticResource AccentGreenBrush}"
                         VerticalAlignment="Center"
                         Click="AddGameButton_Click" />
             </Grid>

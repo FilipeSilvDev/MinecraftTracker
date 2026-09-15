@@ -37,65 +37,11 @@
     <AppxPackagedFile Include="C:\Users\sanzi\source\repos\MinecraftTracker\MinecraftTracker\Assets\Icones\minecraft-modern-icon.png">
       <PackagePath>Assets\Icones\minecraft-modern-icon.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sanzi\source\repos\MinecraftTracker\MinecraftTracker\Assets\Icones\MinecraftTracker_icone.scale-100.png">
-      <PackagePath>Assets\Icones\MinecraftTracker_icone.scale-100.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sanzi\source\repos\MinecraftTracker\MinecraftTracker\Assets\Icones\MinecraftTracker_icone.scale-200.png">
-      <PackagePath>Assets\Icones\MinecraftTracker_icone.scale-200.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sanzi\source\repos\MinecraftTracker\MinecraftTracker\Assets\Icones\MinecraftTracker_icone.scale-400.png">
-      <PackagePath>Assets\Icones\MinecraftTracker_icone.scale-400.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sanzi\source\repos\MinecraftTracker\MinecraftTracker\Assets\Icones\MinecraftTracker_icone.targetsize-16.png">
-      <PackagePath>Assets\Icones\MinecraftTracker_icone.targetsize-16.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sanzi\source\repos\MinecraftTracker\MinecraftTracker\Assets\Icones\MinecraftTracker_icone.targetsize-16_altform-lightunplated.png">
-      <PackagePath>Assets\Icones\MinecraftTracker_icone.targetsize-16_altform-lightunplated.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sanzi\source\repos\MinecraftTracker\MinecraftTracker\Assets\Icones\MinecraftTracker_icone.targetsize-16_altform-unplated.png">
-      <PackagePath>Assets\Icones\MinecraftTracker_icone.targetsize-16_altform-unplated.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sanzi\source\repos\MinecraftTracker\MinecraftTracker\Assets\Icones\MinecraftTracker_icone.targetsize-256.png">
-      <PackagePath>Assets\Icones\MinecraftTracker_icone.targetsize-256.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sanzi\source\repos\MinecraftTracker\MinecraftTracker\Assets\Icones\MinecraftTracker_icone.targetsize-256_altform-lightunplated.png">
-      <PackagePath>Assets\Icones\MinecraftTracker_icone.targetsize-256_altform-lightunplated.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sanzi\source\repos\MinecraftTracker\MinecraftTracker\Assets\Icones\MinecraftTracker_icone.targetsize-256_altform-unplated.png">
-      <PackagePath>Assets\Icones\MinecraftTracker_icone.targetsize-256_altform-unplated.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sanzi\source\repos\MinecraftTracker\MinecraftTracker\Assets\Icones\MinecraftTracker_icone.targetsize-48.png">
-      <PackagePath>Assets\Icones\MinecraftTracker_icone.targetsize-48.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sanzi\source\repos\MinecraftTracker\MinecraftTracker\Assets\Icones\MinecraftTracker_icone.targetsize-48_altform-lightunplated.png">
-      <PackagePath>Assets\Icones\MinecraftTracker_icone.targetsize-48_altform-lightunplated.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sanzi\source\repos\MinecraftTracker\MinecraftTracker\Assets\Icones\MinecraftTracker_icone.targetsize-48_altform-unplated.png">
-      <PackagePath>Assets\Icones\MinecraftTracker_icone.targetsize-48_altform-unplated.png</PackagePath>
-    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\sanzi\source\repos\MinecraftTracker\MinecraftTracker\Assets\Icones\minecraft_icone_javaedition.png">
       <PackagePath>Assets\Icones\minecraft_icone_javaedition.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sanzi\source\repos\MinecraftTracker\MinecraftTracker\Assets\logo-software.png">
-      <PackagePath>Assets\logo-software.png</PackagePath>
-    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\sanzi\source\repos\MinecraftTracker\MinecraftTracker\Assets\Sounds\startup.wav">
       <PackagePath>Assets\Sounds\startup.wav</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sanzi\source\repos\MinecraftTracker\MinecraftTracker\Assets\SplashScreen\SplashScreen.scale-100.png">
-      <PackagePath>Assets\SplashScreen\SplashScreen.scale-100.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sanzi\source\repos\MinecraftTracker\MinecraftTracker\Assets\SplashScreen\SplashScreen.scale-125.png">
-      <PackagePath>Assets\SplashScreen\SplashScreen.scale-125.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sanzi\source\repos\MinecraftTracker\MinecraftTracker\Assets\SplashScreen\SplashScreen.scale-150.png">
-      <PackagePath>Assets\SplashScreen\SplashScreen.scale-150.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sanzi\source\repos\MinecraftTracker\MinecraftTracker\Assets\SplashScreen\SplashScreen.scale-200.png">
-      <PackagePath>Assets\SplashScreen\SplashScreen.scale-200.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sanzi\source\repos\MinecraftTracker\MinecraftTracker\Assets\SplashScreen\SplashScreen.scale-400.png">
-      <PackagePath>Assets\SplashScreen\SplashScreen.scale-400.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\sanzi\source\repos\MinecraftTracker\MinecraftTracker\Assets\SplashScreen\SplashScreen_Base.png">
       <PackagePath>Assets\SplashScreen\SplashScreen_Base.png</PackagePath>
@@ -910,26 +856,56 @@
     <AppxPackagedFile Include="C:\Users\sanzi\source\repos\MinecraftTracker\MinecraftTracker\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\MinecraftTracker.deps.json">
       <PackagePath>MinecraftTracker.deps.json</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sanzi\source\repos\MinecraftTracker\MinecraftTracker\Assets\LockScreenLogo.scale-200.png">
-      <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
+    <AppxPackagedFile Include="C:\Users\sanzi\source\repos\MinecraftTracker\MinecraftTracker\Assets\BadgeLogo\BadgeLogo.scale-125.png">
+      <PackagePath>Assets\BadgeLogo\BadgeLogo.scale-125.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sanzi\source\repos\MinecraftTracker\MinecraftTracker\Assets\SplashScreen.scale-200.png">
-      <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
+    <AppxPackagedFile Include="C:\Users\sanzi\source\repos\MinecraftTracker\MinecraftTracker\Assets\BadgeLogo\BadgeLogo.scale-150.png">
+      <PackagePath>Assets\BadgeLogo\BadgeLogo.scale-150.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sanzi\source\repos\MinecraftTracker\MinecraftTracker\Assets\Square150x150Logo.scale-200.png">
-      <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
+    <AppxPackagedFile Include="C:\Users\sanzi\source\repos\MinecraftTracker\MinecraftTracker\Assets\LargeTile\LargeTile.scale-125.png">
+      <PackagePath>Assets\LargeTile\LargeTile.scale-125.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sanzi\source\repos\MinecraftTracker\MinecraftTracker\Assets\Square44x44Logo.scale-200.png">
-      <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
+    <AppxPackagedFile Include="C:\Users\sanzi\source\repos\MinecraftTracker\MinecraftTracker\Assets\LargeTile\LargeTile.scale-150.png">
+      <PackagePath>Assets\LargeTile\LargeTile.scale-150.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sanzi\source\repos\MinecraftTracker\MinecraftTracker\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
-      <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
+    <AppxPackagedFile Include="C:\Users\sanzi\source\repos\MinecraftTracker\MinecraftTracker\Assets\SplashScreen\SplashScreen.scale-125.png">
+      <PackagePath>Assets\SplashScreen\SplashScreen.scale-125.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sanzi\source\repos\MinecraftTracker\MinecraftTracker\Assets\StoreLogo.png">
-      <PackagePath>Assets\StoreLogo.png</PackagePath>
+    <AppxPackagedFile Include="C:\Users\sanzi\source\repos\MinecraftTracker\MinecraftTracker\Assets\SplashScreen\SplashScreen.scale-150.png">
+      <PackagePath>Assets\SplashScreen\SplashScreen.scale-150.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sanzi\source\repos\MinecraftTracker\MinecraftTracker\Assets\Wide310x150Logo.scale-200.png">
-      <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
+    <AppxPackagedFile Include="C:\Users\sanzi\source\repos\MinecraftTracker\MinecraftTracker\Assets\Square\Square44x44Logo.scale-100.png">
+      <PackagePath>Assets\Square\Square44x44Logo.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sanzi\source\repos\MinecraftTracker\MinecraftTracker\Assets\Square\Square44x44Logo.scale-200.png">
+      <PackagePath>Assets\Square\Square44x44Logo.scale-200.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sanzi\source\repos\MinecraftTracker\MinecraftTracker\Assets\Square\Square44x44Logo.scale-400.png">
+      <PackagePath>Assets\Square\Square44x44Logo.scale-400.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sanzi\source\repos\MinecraftTracker\MinecraftTracker\Assets\Square\Square44x44Logo.targetsize-16.png">
+      <PackagePath>Assets\Square\Square44x44Logo.targetsize-16.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sanzi\source\repos\MinecraftTracker\MinecraftTracker\Assets\Square\Square44x44Logo.targetsize-16_altform-unplated.png">
+      <PackagePath>Assets\Square\Square44x44Logo.targetsize-16_altform-unplated.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sanzi\source\repos\MinecraftTracker\MinecraftTracker\Assets\Square\Square44x44Logo.targetsize-256.png">
+      <PackagePath>Assets\Square\Square44x44Logo.targetsize-256.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sanzi\source\repos\MinecraftTracker\MinecraftTracker\Assets\Square\Square44x44Logo.targetsize-256_altform-unplated.png">
+      <PackagePath>Assets\Square\Square44x44Logo.targetsize-256_altform-unplated.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sanzi\source\repos\MinecraftTracker\MinecraftTracker\Assets\Square\Square44x44Logo.targetsize-48.png">
+      <PackagePath>Assets\Square\Square44x44Logo.targetsize-48.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sanzi\source\repos\MinecraftTracker\MinecraftTracker\Assets\Square\Square44x44Logo.targetsize-48_altform-unplated.png">
+      <PackagePath>Assets\Square\Square44x44Logo.targetsize-48_altform-unplated.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sanzi\source\repos\MinecraftTracker\MinecraftTracker\Assets\StoreLogo\StoreLogo.scale-125.png">
+      <PackagePath>Assets\StoreLogo\StoreLogo.scale-125.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sanzi\source\repos\MinecraftTracker\MinecraftTracker\Assets\StoreLogo\StoreLogo.scale-150.png">
+      <PackagePath>Assets\StoreLogo\StoreLogo.scale-150.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\sanzi\.nuget\packages\microsoft.web.webview2\1.0.3719.77\build\..\lib\Microsoft.Web.WebView2.Core.winmd">
       <PackagePath>Microsoft.Web.WebView2.Core.winmd</PackagePath>

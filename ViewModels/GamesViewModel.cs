@@ -9,6 +9,8 @@ using MinecraftTracker.Models;
 
 namespace MinecraftTracker.ViewModels
 {
+    public readonly record struct CloseGameResult(int ClosedProcesses, int FailedProcesses);
+
     public class GamesViewModel
     {
         public ObservableCollection<GameShortcutItem> Games { get; } = new();
@@ -68,6 +70,40 @@ namespace MinecraftTracker.ViewModels
                 Debug.WriteLine($"Erro ao iniciar '{item.Name}': {ex.Message}");
                 // TODO: mostrar um ContentDialog de erro para o usuário a partir da GamesPage
             }
+        }
+
+        // Encerra somente processos cujo nome corresponde ao processo configurado
+        // para o atalho. A confirmação de perda de dados é feita pela GamesPage.
+        public CloseGameResult CloseGame(GameShortcutItem item)
+        {
+            if (string.IsNullOrWhiteSpace(item.ProcessName))
+            {
+                return new CloseGameResult(0, 0);
+            }
+
+            var closedProcesses = 0;
+            var failedProcesses = 0;
+            var processes = Process.GetProcessesByName(item.ProcessName);
+
+            foreach (var process in processes)
+            {
+                try
+                {
+                    process.Kill(entireProcessTree: true);
+                    closedProcesses++;
+                }
+                catch (Exception ex)
+                {
+                    failedProcesses++;
+                    Debug.WriteLine($"Erro ao fechar '{item.Name}': {ex.Message}");
+                }
+                finally
+                {
+                    process.Dispose();
+                }
+            }
+
+            return new CloseGameResult(closedProcesses, failedProcesses);
         }
 
         // Verifica periodicamente, para cada atalho cadastrado, se o processo

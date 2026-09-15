@@ -124,6 +124,42 @@ namespace MinecraftTracker.Pages
             }
         }
 
+        private async void CloseGameButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (sender is not Button button || button.Tag is not GameShortcutItem item || !item.IsRunning)
+            {
+                return;
+            }
+
+            var dialog = new ContentDialog
+            {
+                Title = "Fechar jogo",
+                Content = $"Fechar \"{item.Name}\" agora? Alterações não salvas no jogo podem ser perdidas.",
+                PrimaryButtonText = "Fechar jogo",
+                CloseButtonText = "Cancelar",
+                DefaultButton = ContentDialogButton.Close,
+                XamlRoot = this.XamlRoot
+            };
+
+            if (await dialog.ShowAsync() != ContentDialogResult.Primary)
+            {
+                return;
+            }
+
+            var result = _viewModel.CloseGame(item);
+            if (result.FailedProcesses > 0)
+            {
+                var errorDialog = new ContentDialog
+                {
+                    Title = "Não foi possível fechar completamente",
+                    Content = $"{result.ClosedProcesses} processo(s) fechado(s) e {result.FailedProcesses} não puderam ser encerrados.",
+                    CloseButtonText = "OK",
+                    XamlRoot = this.XamlRoot
+                };
+                await errorDialog.ShowAsync();
+            }
+        }
+
         private async void RemoveButton_Click(object sender, RoutedEventArgs e)
         {
             if (sender is not Button button || button.Tag is not GameShortcutItem item)

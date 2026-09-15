@@ -226,7 +226,7 @@ namespace MinecraftTracker.MinecraftTracker_XamlTypeInfo
         
         private void InitTypeTables()
         {
-            _typeNameTable = new string[43];
+            _typeNameTable = new string[44];
             _typeNameTable[0] = "Microsoft.UI.Xaml.Controls.XamlControlsResources";
             _typeNameTable[1] = "Microsoft.UI.Xaml.ResourceDictionary";
             _typeNameTable[2] = "Object";
@@ -262,16 +262,17 @@ namespace MinecraftTracker.MinecraftTracker_XamlTypeInfo
             _typeNameTable[32] = "Microsoft.UI.Xaml.Controls.Control";
             _typeNameTable[33] = "MinecraftTracker.MainWindow";
             _typeNameTable[34] = "Microsoft.UI.Xaml.Window";
-            _typeNameTable[35] = "MinecraftTracker.Pages.HomePage";
+            _typeNameTable[35] = "MinecraftTracker.Pages.GamesPage";
             _typeNameTable[36] = "Microsoft.UI.Xaml.Controls.Page";
             _typeNameTable[37] = "Microsoft.UI.Xaml.Controls.UserControl";
-            _typeNameTable[38] = "MinecraftTracker.Pages.SettingsPage";
-            _typeNameTable[39] = "MinecraftTracker.Pages.StatsPage";
-            _typeNameTable[40] = "Microsoft.UI.Xaml.Controls.TreeViewNode";
-            _typeNameTable[41] = "System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Controls.TreeViewNode>";
-            _typeNameTable[42] = "Int32";
+            _typeNameTable[38] = "MinecraftTracker.Pages.HomePage";
+            _typeNameTable[39] = "MinecraftTracker.Pages.SettingsPage";
+            _typeNameTable[40] = "MinecraftTracker.Pages.StatsPage";
+            _typeNameTable[41] = "Microsoft.UI.Xaml.Controls.TreeViewNode";
+            _typeNameTable[42] = "System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Controls.TreeViewNode>";
+            _typeNameTable[43] = "Int32";
 
-            _typeTable = new global::System.Type[43];
+            _typeTable = new global::System.Type[44];
             _typeTable[0] = typeof(global::Microsoft.UI.Xaml.Controls.XamlControlsResources);
             _typeTable[1] = typeof(global::Microsoft.UI.Xaml.ResourceDictionary);
             _typeTable[2] = typeof(global::System.Object);
@@ -307,14 +308,15 @@ namespace MinecraftTracker.MinecraftTracker_XamlTypeInfo
             _typeTable[32] = typeof(global::Microsoft.UI.Xaml.Controls.Control);
             _typeTable[33] = typeof(global::MinecraftTracker.MainWindow);
             _typeTable[34] = typeof(global::Microsoft.UI.Xaml.Window);
-            _typeTable[35] = typeof(global::MinecraftTracker.Pages.HomePage);
+            _typeTable[35] = typeof(global::MinecraftTracker.Pages.GamesPage);
             _typeTable[36] = typeof(global::Microsoft.UI.Xaml.Controls.Page);
             _typeTable[37] = typeof(global::Microsoft.UI.Xaml.Controls.UserControl);
-            _typeTable[38] = typeof(global::MinecraftTracker.Pages.SettingsPage);
-            _typeTable[39] = typeof(global::MinecraftTracker.Pages.StatsPage);
-            _typeTable[40] = typeof(global::Microsoft.UI.Xaml.Controls.TreeViewNode);
-            _typeTable[41] = typeof(global::System.Collections.Generic.IList<global::Microsoft.UI.Xaml.Controls.TreeViewNode>);
-            _typeTable[42] = typeof(global::System.Int32);
+            _typeTable[38] = typeof(global::MinecraftTracker.Pages.HomePage);
+            _typeTable[39] = typeof(global::MinecraftTracker.Pages.SettingsPage);
+            _typeTable[40] = typeof(global::MinecraftTracker.Pages.StatsPage);
+            _typeTable[41] = typeof(global::Microsoft.UI.Xaml.Controls.TreeViewNode);
+            _typeTable[42] = typeof(global::System.Collections.Generic.IList<global::Microsoft.UI.Xaml.Controls.TreeViewNode>);
+            _typeTable[43] = typeof(global::System.Int32);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -356,10 +358,11 @@ namespace MinecraftTracker.MinecraftTracker_XamlTypeInfo
         private object Activate_28_NavigationViewItem() { return new global::Microsoft.UI.Xaml.Controls.NavigationViewItem(); }
         private object Activate_31_InfoBadge() { return new global::Microsoft.UI.Xaml.Controls.InfoBadge(); }
         private object Activate_33_MainWindow() { return new global::MinecraftTracker.MainWindow(); }
-        private object Activate_35_HomePage() { return new global::MinecraftTracker.Pages.HomePage(); }
-        private object Activate_38_SettingsPage() { return new global::MinecraftTracker.Pages.SettingsPage(); }
-        private object Activate_39_StatsPage() { return new global::MinecraftTracker.Pages.StatsPage(); }
-        private object Activate_40_TreeViewNode() { return new global::Microsoft.UI.Xaml.Controls.TreeViewNode(); }
+        private object Activate_35_GamesPage() { return new global::MinecraftTracker.Pages.GamesPage(); }
+        private object Activate_38_HomePage() { return new global::MinecraftTracker.Pages.HomePage(); }
+        private object Activate_39_SettingsPage() { return new global::MinecraftTracker.Pages.SettingsPage(); }
+        private object Activate_40_StatsPage() { return new global::MinecraftTracker.Pages.StatsPage(); }
+        private object Activate_41_TreeViewNode() { return new global::Microsoft.UI.Xaml.Controls.TreeViewNode(); }
         private void StaticInitializer_0_XamlControlsResources() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Microsoft.UI.Xaml.Controls.XamlControlsResources).TypeHandle);
         private void StaticInitializer_4_MicaBackdrop() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Microsoft.UI.Xaml.Media.MicaBackdrop).TypeHandle);
         private void StaticInitializer_6_MicaKind() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Microsoft.UI.Composition.SystemBackdrops.MicaKind).TypeHandle);
@@ -378,11 +381,12 @@ namespace MinecraftTracker.MinecraftTracker_XamlTypeInfo
         private void StaticInitializer_29_NavigationViewItemBase() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Microsoft.UI.Xaml.Controls.NavigationViewItemBase).TypeHandle);
         private void StaticInitializer_31_InfoBadge() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Microsoft.UI.Xaml.Controls.InfoBadge).TypeHandle);
         private void StaticInitializer_33_MainWindow() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::MinecraftTracker.MainWindow).TypeHandle);
-        private void StaticInitializer_35_HomePage() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::MinecraftTracker.Pages.HomePage).TypeHandle);
-        private void StaticInitializer_38_SettingsPage() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::MinecraftTracker.Pages.SettingsPage).TypeHandle);
-        private void StaticInitializer_39_StatsPage() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::MinecraftTracker.Pages.StatsPage).TypeHandle);
-        private void StaticInitializer_40_TreeViewNode() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Microsoft.UI.Xaml.Controls.TreeViewNode).TypeHandle);
-        private void StaticInitializer_41_IList() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::System.Collections.Generic.IList<global::Microsoft.UI.Xaml.Controls.TreeViewNode>).TypeHandle);
+        private void StaticInitializer_35_GamesPage() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::MinecraftTracker.Pages.GamesPage).TypeHandle);
+        private void StaticInitializer_38_HomePage() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::MinecraftTracker.Pages.HomePage).TypeHandle);
+        private void StaticInitializer_39_SettingsPage() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::MinecraftTracker.Pages.SettingsPage).TypeHandle);
+        private void StaticInitializer_40_StatsPage() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::MinecraftTracker.Pages.StatsPage).TypeHandle);
+        private void StaticInitializer_41_TreeViewNode() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::Microsoft.UI.Xaml.Controls.TreeViewNode).TypeHandle);
+        private void StaticInitializer_42_IList() => global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(global::System.Collections.Generic.IList<global::Microsoft.UI.Xaml.Controls.TreeViewNode>).TypeHandle);
         private void MapAdd_0_XamlControlsResources(object instance, object key, object item)
         {
             var collection = (global::System.Collections.Generic.IDictionary<global::System.Object, global::System.Object>)instance;
@@ -396,7 +400,7 @@ namespace MinecraftTracker.MinecraftTracker_XamlTypeInfo
             var newItem = (global::System.Object)item;
             collection.Add(newItem);
         }
-        private void VectorAdd_41_IList(object instance, object item)
+        private void VectorAdd_42_IList(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::Microsoft.UI.Xaml.Controls.TreeViewNode>)instance;
             var newItem = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)item;
@@ -669,10 +673,10 @@ namespace MinecraftTracker.MinecraftTracker_XamlTypeInfo
                 xamlType = new global::MinecraftTracker.MinecraftTracker_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 35:   //  MinecraftTracker.Pages.HomePage
+            case 35:   //  MinecraftTracker.Pages.GamesPage
                 userType = new global::MinecraftTracker.MinecraftTracker_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_35_HomePage;
-                userType.StaticInitializer = StaticInitializer_35_HomePage;
+                userType.Activator = Activate_35_GamesPage;
+                userType.StaticInitializer = StaticInitializer_35_GamesPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
@@ -685,26 +689,34 @@ namespace MinecraftTracker.MinecraftTracker_XamlTypeInfo
                 xamlType = new global::MinecraftTracker.MinecraftTracker_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 38:   //  MinecraftTracker.Pages.SettingsPage
+            case 38:   //  MinecraftTracker.Pages.HomePage
                 userType = new global::MinecraftTracker.MinecraftTracker_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_38_SettingsPage;
-                userType.StaticInitializer = StaticInitializer_38_SettingsPage;
+                userType.Activator = Activate_38_HomePage;
+                userType.StaticInitializer = StaticInitializer_38_HomePage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 39:   //  MinecraftTracker.Pages.StatsPage
+            case 39:   //  MinecraftTracker.Pages.SettingsPage
                 userType = new global::MinecraftTracker.MinecraftTracker_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_39_StatsPage;
-                userType.StaticInitializer = StaticInitializer_39_StatsPage;
+                userType.Activator = Activate_39_SettingsPage;
+                userType.StaticInitializer = StaticInitializer_39_SettingsPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 40:   //  Microsoft.UI.Xaml.Controls.TreeViewNode
+            case 40:   //  MinecraftTracker.Pages.StatsPage
+                userType = new global::MinecraftTracker.MinecraftTracker_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_40_StatsPage;
+                userType.StaticInitializer = StaticInitializer_40_StatsPage;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 41:   //  Microsoft.UI.Xaml.Controls.TreeViewNode
                 userType = new global::MinecraftTracker.MinecraftTracker_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.DependencyObject"));
-                userType.Activator = Activate_40_TreeViewNode;
-                userType.StaticInitializer = StaticInitializer_40_TreeViewNode;
+                userType.Activator = Activate_41_TreeViewNode;
+                userType.StaticInitializer = StaticInitializer_41_TreeViewNode;
                 userType.AddMemberName("Children");
                 userType.AddMemberName("Content");
                 userType.AddMemberName("Depth");
@@ -716,15 +728,15 @@ namespace MinecraftTracker.MinecraftTracker_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 41:   //  System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Controls.TreeViewNode>
+            case 42:   //  System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Controls.TreeViewNode>
                 userType = new global::MinecraftTracker.MinecraftTracker_XamlTypeInfo.XamlUserType(this, typeName, type, null);
-                userType.StaticInitializer = StaticInitializer_41_IList;
-                userType.CollectionAdd = VectorAdd_41_IList;
+                userType.StaticInitializer = StaticInitializer_42_IList;
+                userType.CollectionAdd = VectorAdd_42_IList;
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 42:   //  Int32
+            case 43:   //  Int32
                 xamlType = new global::MinecraftTracker.MinecraftTracker_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
             }

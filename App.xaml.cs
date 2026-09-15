@@ -81,7 +81,7 @@ namespace MinecraftTracker
             {
                 string path = Path.Combine(
                     Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),
-                    "MinecraftTrackerApp",
+                    "MinecraftTracker",
                     "startup-error.log");
                 Directory.CreateDirectory(Path.GetDirectoryName(path)!);
                 File.AppendAllText(path,

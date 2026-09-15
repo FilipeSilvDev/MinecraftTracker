@@ -12,7 +12,7 @@
   <Properties>
     <DisplayName>MinecraftTracker</DisplayName>
     <PublisherDisplayName>sanzi</PublisherDisplayName>
-    <Logo>Assets\StoreLogo.png</Logo>
+    <Logo>Assets\StoreLogo\StoreLogo.png</Logo>
   </Properties>
   <Dependencies>
     <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.17763.0" MaxVersionTested="10.0.26226.0" />
@@ -20,13 +20,13 @@
     <PackageDependency Name="Microsoft.WindowsAppRuntime.2" MinVersion="2.4.0.0" Publisher="CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US" />
   </Dependencies>
   <Resources>
-    <Resource Language="EN-US" />
+    <Resource Language="PT-BR" />
   </Resources>
   <Applications>
     <Application Id="App" Executable="MinecraftTracker.exe" EntryPoint="Windows.FullTrustApplication">
-      <uap:VisualElements DisplayName="MinecraftTracker" Description="MinecraftTracker" BackgroundColor="transparent" Square150x150Logo="Assets\Square150x150Logo.png" Square44x44Logo="Assets\Square44x44Logo.png">
-        <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png" />
-        <uap:SplashScreen Image="Assets\SplashScreen.png" />
+      <uap:VisualElements DisplayName="MinecraftTracker" Description="MinecraftTracker" BackgroundColor="transparent" Square150x150Logo="Assets\Square150x150Logo.png" Square44x44Logo="Assets\Square\Square44x44Logo.png">
+        <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png" Square310x310Logo="Assets\LargeTile\LargeTile.png" />
+        <uap:SplashScreen Image="Assets\SplashScreen\SplashScreen.png" />
       </uap:VisualElements>
     </Application>
   </Applications>

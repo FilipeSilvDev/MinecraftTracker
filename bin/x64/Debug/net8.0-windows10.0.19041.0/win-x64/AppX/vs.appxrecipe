@@ -17,7 +17,7 @@
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
     <LayoutDir>C:\Users\sanzi\source\repos\MinecraftTracker\MinecraftTracker\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppX</LayoutDir>
-    <RegisteredManifestChecksum>733B7B8904D6E62745A741E87EF8BE39B1D476E8767AA54B90052C84AFA78902</RegisteredManifestChecksum>
+    <RegisteredManifestChecksum>2795D1A776D3F6F3500BD20DA3CDD9CDF41799922322A0CBA339B55C4D698A47</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>c06c3218-099e-47fa-a548-3cdb28a4741c_1.0.0.0_x64__rje01vqw9x3r4</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>c06c3218-099e-47fa-a548-3cdb28a4741c_rje01vqw9x3r4!App</RegisteredUserModeAppID>
     <RegisteredPackageID>c06c3218-099e-47fa-a548-3cdb28a4741c</RegisteredPackageID>
@@ -28,113 +28,41 @@
     <AppXManifest Include="C:\Users\sanzi\source\repos\MinecraftTracker\MinecraftTracker\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2026-09-15T00:45:26.705</Modified>
+      <Modified>2026-09-15T17:57:27.146</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\sanzi\source\repos\MinecraftTracker\MinecraftTracker\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\MinecraftTracker.runtimeconfig.json">
       <PackagePath>MinecraftTracker.runtimeconfig.json</PackagePath>
-      <Modified>2026-09-15T00:45:26.063</Modified>
+      <Modified>2026-09-15T17:57:26.846</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\sanzi\source\repos\MinecraftTracker\MinecraftTracker\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\apphost.exe">
       <PackagePath>MinecraftTracker.exe</PackagePath>
-      <Modified>2026-09-15T00:45:25.568</Modified>
+      <Modified>2026-09-15T17:57:26.616</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\sanzi\source\repos\MinecraftTracker\MinecraftTracker\Assets\Covers\minecraft_cover.png">
       <PackagePath>Assets\Covers\minecraft_cover.png</PackagePath>
-      <Modified>2026-09-11T01:33:59.119</Modified>
+      <Modified>2026-09-15T01:04:45.014</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\sanzi\source\repos\MinecraftTracker\MinecraftTracker\Assets\Icones\minecraft-modern-icon.png">
       <PackagePath>Assets\Icones\minecraft-modern-icon.png</PackagePath>
-      <Modified>2026-09-12T03:05:26.451</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sanzi\source\repos\MinecraftTracker\MinecraftTracker\Assets\Icones\MinecraftTracker_icone.scale-100.png">
-      <PackagePath>Assets\Icones\MinecraftTracker_icone.scale-100.png</PackagePath>
-      <Modified>2026-09-12T16:23:15.586</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sanzi\source\repos\MinecraftTracker\MinecraftTracker\Assets\Icones\MinecraftTracker_icone.scale-200.png">
-      <PackagePath>Assets\Icones\MinecraftTracker_icone.scale-200.png</PackagePath>
-      <Modified>2026-09-12T16:23:15.593</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sanzi\source\repos\MinecraftTracker\MinecraftTracker\Assets\Icones\MinecraftTracker_icone.scale-400.png">
-      <PackagePath>Assets\Icones\MinecraftTracker_icone.scale-400.png</PackagePath>
-      <Modified>2026-09-12T16:23:15.606</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sanzi\source\repos\MinecraftTracker\MinecraftTracker\Assets\Icones\MinecraftTracker_icone.targetsize-16.png">
-      <PackagePath>Assets\Icones\MinecraftTracker_icone.targetsize-16.png</PackagePath>
-      <Modified>2026-09-12T16:23:15.609</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sanzi\source\repos\MinecraftTracker\MinecraftTracker\Assets\Icones\MinecraftTracker_icone.targetsize-16_altform-lightunplated.png">
-      <PackagePath>Assets\Icones\MinecraftTracker_icone.targetsize-16_altform-lightunplated.png</PackagePath>
-      <Modified>2026-09-12T16:23:15.609</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sanzi\source\repos\MinecraftTracker\MinecraftTracker\Assets\Icones\MinecraftTracker_icone.targetsize-16_altform-unplated.png">
-      <PackagePath>Assets\Icones\MinecraftTracker_icone.targetsize-16_altform-unplated.png</PackagePath>
-      <Modified>2026-09-12T16:23:15.643</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sanzi\source\repos\MinecraftTracker\MinecraftTracker\Assets\Icones\MinecraftTracker_icone.targetsize-256.png">
-      <PackagePath>Assets\Icones\MinecraftTracker_icone.targetsize-256.png</PackagePath>
-      <Modified>2026-09-12T16:23:15.639</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sanzi\source\repos\MinecraftTracker\MinecraftTracker\Assets\Icones\MinecraftTracker_icone.targetsize-256_altform-lightunplated.png">
-      <PackagePath>Assets\Icones\MinecraftTracker_icone.targetsize-256_altform-lightunplated.png</PackagePath>
-      <Modified>2026-09-12T16:23:15.639</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sanzi\source\repos\MinecraftTracker\MinecraftTracker\Assets\Icones\MinecraftTracker_icone.targetsize-256_altform-unplated.png">
-      <PackagePath>Assets\Icones\MinecraftTracker_icone.targetsize-256_altform-unplated.png</PackagePath>
-      <Modified>2026-09-12T16:23:15.686</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sanzi\source\repos\MinecraftTracker\MinecraftTracker\Assets\Icones\MinecraftTracker_icone.targetsize-48.png">
-      <PackagePath>Assets\Icones\MinecraftTracker_icone.targetsize-48.png</PackagePath>
-      <Modified>2026-09-12T16:23:15.646</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sanzi\source\repos\MinecraftTracker\MinecraftTracker\Assets\Icones\MinecraftTracker_icone.targetsize-48_altform-lightunplated.png">
-      <PackagePath>Assets\Icones\MinecraftTracker_icone.targetsize-48_altform-lightunplated.png</PackagePath>
-      <Modified>2026-09-12T16:23:15.646</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sanzi\source\repos\MinecraftTracker\MinecraftTracker\Assets\Icones\MinecraftTracker_icone.targetsize-48_altform-unplated.png">
-      <PackagePath>Assets\Icones\MinecraftTracker_icone.targetsize-48_altform-unplated.png</PackagePath>
-      <Modified>2026-09-12T16:23:15.646</Modified>
+      <Modified>2026-09-15T01:04:45.135</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\sanzi\source\repos\MinecraftTracker\MinecraftTracker\Assets\Icones\minecraft_icone_javaedition.png">
       <PackagePath>Assets\Icones\minecraft_icone_javaedition.png</PackagePath>
-      <Modified>2026-09-12T16:07:50.958</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sanzi\source\repos\MinecraftTracker\MinecraftTracker\Assets\logo-software.png">
-      <PackagePath>Assets\logo-software.png</PackagePath>
-      <Modified>2026-09-12T17:04:45.833</Modified>
+      <Modified>2026-09-15T01:04:45.142</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\sanzi\source\repos\MinecraftTracker\MinecraftTracker\Assets\Sounds\startup.wav">
       <PackagePath>Assets\Sounds\startup.wav</PackagePath>
-      <Modified>2026-09-12T16:03:10.493</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sanzi\source\repos\MinecraftTracker\MinecraftTracker\Assets\SplashScreen\SplashScreen.scale-100.png">
-      <PackagePath>Assets\SplashScreen\SplashScreen.scale-100.png</PackagePath>
-      <Modified>2026-09-12T16:45:29.473</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sanzi\source\repos\MinecraftTracker\MinecraftTracker\Assets\SplashScreen\SplashScreen.scale-125.png">
-      <PackagePath>Assets\SplashScreen\SplashScreen.scale-125.png</PackagePath>
-      <Modified>2026-09-12T16:45:29.512</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sanzi\source\repos\MinecraftTracker\MinecraftTracker\Assets\SplashScreen\SplashScreen.scale-150.png">
-      <PackagePath>Assets\SplashScreen\SplashScreen.scale-150.png</PackagePath>
-      <Modified>2026-09-12T16:45:29.561</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sanzi\source\repos\MinecraftTracker\MinecraftTracker\Assets\SplashScreen\SplashScreen.scale-200.png">
-      <PackagePath>Assets\SplashScreen\SplashScreen.scale-200.png</PackagePath>
-      <Modified>2026-09-12T16:45:29.638</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sanzi\source\repos\MinecraftTracker\MinecraftTracker\Assets\SplashScreen\SplashScreen.scale-400.png">
-      <PackagePath>Assets\SplashScreen\SplashScreen.scale-400.png</PackagePath>
-      <Modified>2026-09-12T16:45:29.899</Modified>
+      <Modified>2026-09-15T12:13:42.731</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\sanzi\source\repos\MinecraftTracker\MinecraftTracker\Assets\SplashScreen\SplashScreen_Base.png">
       <PackagePath>Assets\SplashScreen\SplashScreen_Base.png</PackagePath>
-      <Modified>2026-09-12T16:44:27.124</Modified>
+      <Modified>2026-09-15T01:04:45.219</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\sanzi\source\repos\MinecraftTracker\MinecraftTracker\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\MinecraftTracker.dll">
       <PackagePath>MinecraftTracker.dll</PackagePath>
-      <Modified>2026-09-15T00:45:25.553</Modified>
+      <Modified>2026-09-15T17:57:26.611</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\sanzi\.nuget\packages\microsoft.netcore.app.runtime.win-x64\8.0.31\runtimes\win-x64\lib\net8.0\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -1210,35 +1138,75 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\sanzi\source\repos\MinecraftTracker\MinecraftTracker\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\MinecraftTracker.deps.json">
       <PackagePath>MinecraftTracker.deps.json</PackagePath>
-      <Modified>2026-09-15T00:45:26.039</Modified>
+      <Modified>2026-09-15T17:57:26.842</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sanzi\source\repos\MinecraftTracker\MinecraftTracker\Assets\LockScreenLogo.scale-200.png">
-      <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
-      <Modified>2026-09-12T18:06:35.063</Modified>
+    <AppxPackagedFile Include="C:\Users\sanzi\source\repos\MinecraftTracker\MinecraftTracker\Assets\BadgeLogo\BadgeLogo.scale-125.png">
+      <PackagePath>Assets\BadgeLogo\BadgeLogo.scale-125.png</PackagePath>
+      <Modified>2026-09-15T17:40:04.558</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sanzi\source\repos\MinecraftTracker\MinecraftTracker\Assets\SplashScreen.scale-200.png">
-      <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
-      <Modified>2026-09-12T18:06:35.064</Modified>
+    <AppxPackagedFile Include="C:\Users\sanzi\source\repos\MinecraftTracker\MinecraftTracker\Assets\BadgeLogo\BadgeLogo.scale-150.png">
+      <PackagePath>Assets\BadgeLogo\BadgeLogo.scale-150.png</PackagePath>
+      <Modified>2026-09-15T17:40:04.577</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sanzi\source\repos\MinecraftTracker\MinecraftTracker\Assets\Square150x150Logo.scale-200.png">
-      <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
-      <Modified>2026-09-12T18:06:35.064</Modified>
+    <AppxPackagedFile Include="C:\Users\sanzi\source\repos\MinecraftTracker\MinecraftTracker\Assets\LargeTile\LargeTile.scale-125.png">
+      <PackagePath>Assets\LargeTile\LargeTile.scale-125.png</PackagePath>
+      <Modified>2026-09-15T17:40:54.286</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sanzi\source\repos\MinecraftTracker\MinecraftTracker\Assets\Square44x44Logo.scale-200.png">
-      <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
-      <Modified>2026-09-12T18:06:35.065</Modified>
+    <AppxPackagedFile Include="C:\Users\sanzi\source\repos\MinecraftTracker\MinecraftTracker\Assets\LargeTile\LargeTile.scale-150.png">
+      <PackagePath>Assets\LargeTile\LargeTile.scale-150.png</PackagePath>
+      <Modified>2026-09-15T17:40:54.305</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sanzi\source\repos\MinecraftTracker\MinecraftTracker\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
-      <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
-      <Modified>2026-09-12T18:06:35.066</Modified>
+    <AppxPackagedFile Include="C:\Users\sanzi\source\repos\MinecraftTracker\MinecraftTracker\Assets\SplashScreen\SplashScreen.scale-125.png">
+      <PackagePath>Assets\SplashScreen\SplashScreen.scale-125.png</PackagePath>
+      <Modified>2026-09-15T17:39:13.383</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sanzi\source\repos\MinecraftTracker\MinecraftTracker\Assets\StoreLogo.png">
-      <PackagePath>Assets\StoreLogo.png</PackagePath>
-      <Modified>2026-09-12T17:04:45.833</Modified>
+    <AppxPackagedFile Include="C:\Users\sanzi\source\repos\MinecraftTracker\MinecraftTracker\Assets\SplashScreen\SplashScreen.scale-150.png">
+      <PackagePath>Assets\SplashScreen\SplashScreen.scale-150.png</PackagePath>
+      <Modified>2026-09-15T17:39:13.432</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sanzi\source\repos\MinecraftTracker\MinecraftTracker\Assets\Wide310x150Logo.scale-200.png">
-      <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
-      <Modified>2026-09-12T18:06:35.067</Modified>
+    <AppxPackagedFile Include="C:\Users\sanzi\source\repos\MinecraftTracker\MinecraftTracker\Assets\Square\Square44x44Logo.scale-100.png">
+      <PackagePath>Assets\Square\Square44x44Logo.scale-100.png</PackagePath>
+      <Modified>2026-09-15T17:36:30.009</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sanzi\source\repos\MinecraftTracker\MinecraftTracker\Assets\Square\Square44x44Logo.scale-200.png">
+      <PackagePath>Assets\Square\Square44x44Logo.scale-200.png</PackagePath>
+      <Modified>2026-09-15T17:36:30.030</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sanzi\source\repos\MinecraftTracker\MinecraftTracker\Assets\Square\Square44x44Logo.scale-400.png">
+      <PackagePath>Assets\Square\Square44x44Logo.scale-400.png</PackagePath>
+      <Modified>2026-09-15T17:36:30.056</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sanzi\source\repos\MinecraftTracker\MinecraftTracker\Assets\Square\Square44x44Logo.targetsize-16.png">
+      <PackagePath>Assets\Square\Square44x44Logo.targetsize-16.png</PackagePath>
+      <Modified>2026-09-15T17:36:30.074</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sanzi\source\repos\MinecraftTracker\MinecraftTracker\Assets\Square\Square44x44Logo.targetsize-16_altform-unplated.png">
+      <PackagePath>Assets\Square\Square44x44Logo.targetsize-16_altform-unplated.png</PackagePath>
+      <Modified>2026-09-15T17:36:30.145</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sanzi\source\repos\MinecraftTracker\MinecraftTracker\Assets\Square\Square44x44Logo.targetsize-256.png">
+      <PackagePath>Assets\Square\Square44x44Logo.targetsize-256.png</PackagePath>
+      <Modified>2026-09-15T17:36:30.126</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sanzi\source\repos\MinecraftTracker\MinecraftTracker\Assets\Square\Square44x44Logo.targetsize-256_altform-unplated.png">
+      <PackagePath>Assets\Square\Square44x44Logo.targetsize-256_altform-unplated.png</PackagePath>
+      <Modified>2026-09-15T17:36:30.210</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sanzi\source\repos\MinecraftTracker\MinecraftTracker\Assets\Square\Square44x44Logo.targetsize-48.png">
+      <PackagePath>Assets\Square\Square44x44Logo.targetsize-48.png</PackagePath>
+      <Modified>2026-09-15T17:36:30.092</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sanzi\source\repos\MinecraftTracker\MinecraftTracker\Assets\Square\Square44x44Logo.targetsize-48_altform-unplated.png">
+      <PackagePath>Assets\Square\Square44x44Logo.targetsize-48_altform-unplated.png</PackagePath>
+      <Modified>2026-09-15T17:36:30.163</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sanzi\source\repos\MinecraftTracker\MinecraftTracker\Assets\StoreLogo\StoreLogo.scale-125.png">
+      <PackagePath>Assets\StoreLogo\StoreLogo.scale-125.png</PackagePath>
+      <Modified>2026-09-15T17:40:54.286</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sanzi\source\repos\MinecraftTracker\MinecraftTracker\Assets\StoreLogo\StoreLogo.scale-150.png">
+      <PackagePath>Assets\StoreLogo\StoreLogo.scale-150.png</PackagePath>
+      <Modified>2026-09-15T17:40:54.305</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\sanzi\.nuget\packages\microsoft.web.webview2\1.0.3719.77\build\..\lib\Microsoft.Web.WebView2.Core.winmd">
       <PackagePath>Microsoft.Web.WebView2.Core.winmd</PackagePath>
@@ -1246,7 +1214,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\sanzi\source\repos\MinecraftTracker\MinecraftTracker\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2026-09-15T00:45:26.304</Modified>
+      <Modified>2026-09-15T17:57:26.905</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
