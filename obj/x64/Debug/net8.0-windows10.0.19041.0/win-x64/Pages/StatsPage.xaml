@@ -1,0 +1,100 @@
+﻿<Page
+    x:Class="MinecraftTracker.Pages.StatsPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource BgBrush}">
+
+    <ScrollViewer Padding="40,32,40,40" VerticalScrollBarVisibility="Auto">
+        <StackPanel MaxWidth="1040" HorizontalAlignment="Stretch" Spacing="24">
+
+            <!--  Cabeçalho da página  -->
+            <StackPanel Spacing="4">
+                <TextBlock Text="Estatísticas" Style="{StaticResource PageHeaderTitleStyle}" />
+                <TextBlock Text="Acompanhe sua evolução e seus hábitos de jogo ao longo do tempo." Style="{StaticResource PageHeaderSubtitleStyle}" />
+            </StackPanel>
+
+            <!--  Cards de resumo  -->
+            <Grid ColumnSpacing="20">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Border Grid.Column="0" Style="{StaticResource CardStyle}" Padding="18">
+                    <StackPanel Spacing="10">
+                        <Border Width="40" Height="40" CornerRadius="10" Background="{ThemeResource CardBrushAlt}" HorizontalAlignment="Left">
+                            <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE823;" FontSize="16" Foreground="{ThemeResource AccentGreenBrush}" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Border>
+                        <StackPanel Spacing="2">
+                            <TextBlock Text="Últimos 7 dias" Style="{StaticResource LabelStyle}" />
+                            <TextBlock Text="{Binding WeekTotal}" Style="{StaticResource MonoValueStyle}" FontSize="20" FontWeight="Bold" />
+                        </StackPanel>
+                    </StackPanel>
+                </Border>
+
+                <Border Grid.Column="1" Style="{StaticResource CardStyle}" Padding="18">
+                    <StackPanel Spacing="10">
+                        <Border Width="40" Height="40" CornerRadius="10" Background="{ThemeResource CardBrushAlt}" HorizontalAlignment="Left">
+                            <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE787;" FontSize="16" Foreground="{ThemeResource AccentBlueBrush}" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Border>
+                        <StackPanel Spacing="2">
+                            <TextBlock Text="Sessões registradas" Style="{StaticResource LabelStyle}" />
+                            <TextBlock Text="{Binding SessionsCount}" Style="{StaticResource MonoValueStyle}" FontSize="20" FontWeight="Bold" />
+                        </StackPanel>
+                    </StackPanel>
+                </Border>
+
+                <Border Grid.Column="2" Style="{StaticResource CardStyle}" Padding="18">
+                    <StackPanel Spacing="10">
+                        <Border Width="40" Height="40" CornerRadius="10" Background="{ThemeResource CardBrushAlt}" HorizontalAlignment="Left">
+                            <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE9D9;" FontSize="16" Foreground="{ThemeResource AccentGreenBrush}" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Border>
+                        <StackPanel Spacing="2">
+                            <TextBlock Text="Média por sessão" Style="{StaticResource LabelStyle}" />
+                            <TextBlock Text="{Binding AverageSession}" Style="{StaticResource MonoValueStyle}" FontSize="20" FontWeight="Bold" />
+                        </StackPanel>
+                    </StackPanel>
+                </Border>
+
+                <Border Grid.Column="3" Style="{StaticResource CardStyle}" Padding="18">
+                    <StackPanel Spacing="10">
+                        <Border Width="40" Height="40" CornerRadius="10" Background="{ThemeResource CardBrushAlt}" HorizontalAlignment="Left">
+                            <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE768;" FontSize="16" Foreground="{ThemeResource AccentBlueBrush}" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Border>
+                        <StackPanel Spacing="2">
+                            <TextBlock Text="Sessão mais longa" Style="{StaticResource LabelStyle}" />
+                            <TextBlock Text="{Binding LongestSession}" Style="{StaticResource MonoValueStyle}" FontSize="20" FontWeight="Bold" />
+                        </StackPanel>
+                    </StackPanel>
+                </Border>
+            </Grid>
+
+            <!--  Gráfico "Últimos 7 dias"  -->
+            <Border Style="{StaticResource CardStyle}">
+                <StackPanel Spacing="20">
+                    <StackPanel Orientation="Horizontal" Spacing="10">
+                        <Rectangle Style="{StaticResource AccentBarStyle}" />
+                        <TextBlock Text="Tempo jogado por dia" Style="{StaticResource SectionTitleStyle}" />
+                    </StackPanel>
+
+                    <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled">
+                        <ItemsControl ItemsSource="{Binding WeeklyChart}" ItemTemplate="{StaticResource DayBarTemplate}">
+                            <ItemsControl.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <StackPanel Orientation="Horizontal" Spacing="18" HorizontalAlignment="Center" />
+                                </ItemsPanelTemplate>
+                            </ItemsControl.ItemsPanel>
+                        </ItemsControl>
+                    </ScrollViewer>
+                </StackPanel>
+            </Border>
+
+        </StackPanel>
+    </ScrollViewer>
+</Page>
+

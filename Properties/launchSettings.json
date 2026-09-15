@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "PlayStats (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "PlayStats (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}

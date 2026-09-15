@@ -1,0 +1,1 @@
+C:\Users\sanzi\source\repos\MinecraftTracker\MinecraftTracker\MinecraftTracker.csproj;x64
