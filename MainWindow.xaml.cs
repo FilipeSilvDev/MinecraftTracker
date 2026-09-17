@@ -4,9 +4,9 @@ using Microsoft.UI;
 using Microsoft.UI.Windowing;
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
+using MinecraftTracker.Pages;
 using MinecraftTracker.Services;
 using MinecraftTracker.ViewModels;
-using MinecraftTracker.Pages;
 using Windows.Media.Core;
 using Windows.Media.Playback;
 using WinRT.Interop;
@@ -40,19 +40,9 @@ namespace MinecraftTracker
             }
             catch { /* Apenas para evitar de fechar em caso de erro */ }
 
-            try
-            {
-                AppWindow.Resize(new Windows.Graphics.SizeInt32(810, 750));
-                OverlappedPresenter presenter = OverlappedPresenter.Create();
-                presenter.IsResizable = false;
-                AppWindow.SetPresenter(presenter);
-            }
-            catch (Exception ex)
-            {
-                // O tamanho/apresentador dependem do contexto de janela do pacote.
-                // A falha não deve impedir a criação da janela.
-                Debug.WriteLine($"Falha ao configurar o presenter da janela: {ex}");
-            }
+            AppWindow.Resize(new Windows.Graphics.SizeInt32(810, 750));
+            OverlappedPresenter presenter = OverlappedPresenter.Create();
+            presenter.IsResizable = false;
 
             try
             {
@@ -64,6 +54,8 @@ namespace MinecraftTracker
             {
                 Debug.WriteLine($"Erro ao carregar ViewModel: {ex.Message}");
             }
+
+            AppWindow.SetPresenter(presenter);
 
             // Página inicial ao abrir o app
             ContentFrame.Navigate(typeof(HomePage));
@@ -154,6 +146,7 @@ namespace MinecraftTracker
                 Type? pageType = tag switch
                 {
                     "home" => typeof(HomePage),
+                    "games" => typeof(GamesPage),
                     "stats" => typeof(StatsPage),
                     "settings" => typeof(SettingsPage),
                     _ => null

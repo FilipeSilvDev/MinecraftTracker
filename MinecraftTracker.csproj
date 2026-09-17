@@ -14,7 +14,19 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
   <ItemGroup>
+    <Content Remove="Assets\Square\Square44x44Logo.altform-lightunplated_targetsize-16.png" />
+    <Content Remove="Assets\Square\Square44x44Logo.altform-lightunplated_targetsize-256.png" />
+    <Content Remove="Assets\Square\Square44x44Logo.altform-lightunplated_targetsize-48.png" />
+    <Content Remove="Assets\Square\Square44x44Logo.altform-unplated_targetsize-16.png" />
+    <Content Remove="Assets\Square\Square44x44Logo.altform-unplated_targetsize-256.png" />
+    <Content Remove="Assets\Square\Square44x44Logo.altform-unplated_targetsize-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Assets\BadgeLogo\BadgeLogo.scale-125.png" />
+    <None Remove="Assets\BadgeLogo\BadgeLogo.scale-150.png" />
     <None Remove="Assets\Covers\minecraft_cover.png" />
+    <None Remove="Assets\Icones\avatar.png" />
+    <None Remove="Assets\Icones\menu-icone.png" />
     <None Remove="Assets\Icones\minecraft-modern-icon.png" />
     <None Remove="Assets\Icones\MinecraftTracker_icone.scale-100.png" />
     <None Remove="Assets\Icones\MinecraftTracker_icone.scale-200.png" />
@@ -29,24 +41,29 @@
     <None Remove="Assets\Icones\MinecraftTracker_icone.targetsize-48_altform-lightunplated.png" />
     <None Remove="Assets\Icones\MinecraftTracker_icone.targetsize-48_altform-unplated.png" />
     <None Remove="Assets\Icones\minecraft_icone_javaedition.png" />
+    <None Remove="Assets\LargeTile\LargeTile.scale-125.png" />
+    <None Remove="Assets\LargeTile\LargeTile.scale-150.png" />
     <None Remove="Assets\logo-software.png" />
     <None Remove="Assets\Sounds\startup.wav" />
-    <None Remove="Assets\SplashScreen\SplashScreen.scale-100.png" />
+    <None Remove="Assets\SplashScreen.scale-100.png" />
+    <None Remove="Assets\SplashScreen.scale-125.png" />
+    <None Remove="Assets\SplashScreen.scale-150.png" />
+    <None Remove="Assets\SplashScreen.scale-200.png" />
+    <None Remove="Assets\SplashScreen.scale-400.png" />
     <None Remove="Assets\SplashScreen\SplashScreen.scale-125.png" />
     <None Remove="Assets\SplashScreen\SplashScreen.scale-150.png" />
-    <None Remove="Assets\SplashScreen\SplashScreen.scale-200.png" />
-    <None Remove="Assets\SplashScreen\SplashScreen.scale-400.png" />
     <None Remove="Assets\SplashScreen\SplashScreen_Base.png" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Content Include="Assets\SplashScreen.scale-200.png" />
-    <Content Include="Assets\LockScreenLogo.scale-200.png" />
-    <Content Include="Assets\Square150x150Logo.scale-200.png" />
-    <Content Include="Assets\Square44x44Logo.scale-200.png" />
-    <Content Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png" />
-    <Content Include="Assets\StoreLogo.png" />
-    <Content Include="Assets\Wide310x150Logo.scale-200.png" />
+    <None Remove="Assets\Square\Square44x44Logo.scale-100.png" />
+    <None Remove="Assets\Square\Square44x44Logo.scale-200.png" />
+    <None Remove="Assets\Square\Square44x44Logo.scale-400.png" />
+    <None Remove="Assets\Square\Square44x44Logo.targetsize-16.png" />
+    <None Remove="Assets\Square\Square44x44Logo.targetsize-16_altform-unplated.png" />
+    <None Remove="Assets\Square\Square44x44Logo.targetsize-256.png" />
+    <None Remove="Assets\Square\Square44x44Logo.targetsize-256_altform-unplated.png" />
+    <None Remove="Assets\Square\Square44x44Logo.targetsize-48.png" />
+    <None Remove="Assets\Square\Square44x44Logo.targetsize-48_altform-unplated.png" />
+    <None Remove="Assets\StoreLogo\StoreLogo.scale-125.png" />
+    <None Remove="Assets\StoreLogo\StoreLogo.scale-150.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -70,6 +87,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Update="Assets\Covers\minecraft_cover.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Assets\Icones\avatar.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Assets\Icones\menu-icone.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Update="Assets\Icones\minecraft-modern-icon.png">
@@ -120,21 +143,6 @@
     <Content Update="Assets\Sounds\startup.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Update="Assets\SplashScreen\SplashScreen.scale-100.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Update="Assets\SplashScreen\SplashScreen.scale-125.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Update="Assets\SplashScreen\SplashScreen.scale-150.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Update="Assets\SplashScreen\SplashScreen.scale-200.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Update="Assets\SplashScreen\SplashScreen.scale-400.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
     <Content Update="Assets\SplashScreen\SplashScreen_Base.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -155,5 +163,6 @@
     <PublishReadyToRun Condition="'$(Configuration)' != 'Debug'">True</PublishReadyToRun>
     <PublishTrimmed Condition="'$(Configuration)' == 'Debug'">False</PublishTrimmed>
     <PublishTrimmed Condition="'$(Configuration)' != 'Debug'">True</PublishTrimmed>
+    <DefaultLanguage>pt-BR</DefaultLanguage>
   </PropertyGroup>
 </Project>

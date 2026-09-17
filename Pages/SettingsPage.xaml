@@ -118,15 +118,34 @@
 
             <!--  ===== Sobre ===== -->
             <Border Style="{StaticResource CardStyle}">
-                <StackPanel Orientation="Horizontal" Spacing="16">
-                    <Border Width="48" Height="48" CornerRadius="12" Background="{ThemeResource CardBrushAlt}">
-                        <Image Source="ms-appx:///Assets/Icones/MinecraftTracker_icone.png" Width="34" Height="34" Stretch="Uniform" HorizontalAlignment="Center" VerticalAlignment="Center" />
-                    </Border>
-                    <StackPanel VerticalAlignment="Center" Spacing="2">
-                        <TextBlock Text="MinecraftTracker" FontWeight="SemiBold" FontSize="15" Foreground="{ThemeResource TextPrimaryBrush}" />
-                        <TextBlock Text="Versão 1.0.0" FontSize="12" Foreground="{ThemeResource TextMutedBrush}" />
+                <Grid ColumnSpacing="16">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+
+                    <!-- Bloco da Esquerda -->
+                    <StackPanel Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center" Spacing="12">
+                        <Border Width="48" Height="48" CornerRadius="12" Background="{ThemeResource CardBrushAlt}">
+                            <Image Source="ms-appx:///Assets/Icones/minecraft-modern-icon.png" Width="48" Height="48" Stretch="Uniform" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Border>
+                        <StackPanel VerticalAlignment="Center" Spacing="2">
+                            <TextBlock Text="MinecraftTracker" FontWeight="SemiBold" FontSize="15" Foreground="{ThemeResource TextPrimaryBrush}" />
+                            <TextBlock Text="Versão 1.0.0" FontSize="12" Foreground="{ThemeResource TextMutedBrush}" />
+                        </StackPanel>
                     </StackPanel>
-                </StackPanel>
+
+                    <!-- Bloco da Direita -->
+                    <StackPanel Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center" Spacing="12">
+                        <Border Width="48" Height="48" CornerRadius="20" Background="{ThemeResource CardBrushAlt}">
+                            <Image Source="ms-appx:///Assets/Icones/avatar.png" Width="48" Height="48" Stretch="Uniform" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Border>
+                        <StackPanel VerticalAlignment="Center" Spacing="2">
+                            <TextBlock Text="FilipeSilv.Dev" FontWeight="SemiBold" FontSize="15" Foreground="{ThemeResource TextPrimaryBrush}" />
+                            <TextBlock Text="Created by" FontSize="12" Foreground="{ThemeResource TextMutedBrush}" />
+                        </StackPanel>
+                    </StackPanel>
+                </Grid>
             </Border>
 
         </StackPanel>

@@ -1,6 +1,6 @@
 <p align="center">
   <!-- Substitua o caminho da imagem 'Assets/logo-software.png' pelo caminho correto no seu repositório -->
-  <img src="Assets/logo-software.png" alt="MinecraftTracker Logo" width="180"/>
+  <img src="Assets/Icones/menu-icone.png" alt="MinecraftTracker Logo" width="180"/>
 </p>
 
 <h1 align="center">MinecraftTracker</h1>
