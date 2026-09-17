@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MinecraftTracker")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+341c2ebfc92fb5063d2dc4aed520a147210ed995")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8c71af4cec7a13d561cc9643c95daf4d4cb314b2")]
 [assembly: System.Reflection.AssemblyProductAttribute("MinecraftTracker")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MinecraftTracker")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

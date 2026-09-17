@@ -33,7 +33,7 @@
                 </TextBlock>
                 <Rectangle Width="1" Height="16" Fill="{ThemeResource BorderBrush1}" Margin="4,0" />
                 <!--  TODO: tornar dinâmico e refletir o jogo detectado  -->
-                <TextBlock Text="Minecraft" Foreground="{ThemeResource TextSecondaryBrush}" FontSize="13" VerticalAlignment="Center" />
+                <TextBlock Text="by FilipeSilvDev" Foreground="{ThemeResource TextSecondaryBrush}" FontSize="13" VerticalAlignment="Center" />
             </StackPanel>
         </Border>
 
@@ -65,11 +65,6 @@
                         <FontIcon Style="{StaticResource NavIconStyle}" Glyph="&#xE80F;" />
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
-                <NavigationViewItem x:Name="GamesNavItem" Content="Jogos" Tag="games">
-                    <NavigationViewItem.Icon>
-                        <FontIcon Style="{StaticResource NavIconStyle}" Glyph="&#xE768;" />
-                    </NavigationViewItem.Icon>
-                </NavigationViewItem>
                 <NavigationViewItem x:Name="StatsNavItem" Content="Estatísticas" Tag="stats">
                     <NavigationViewItem.Icon>
                         <FontIcon Style="{StaticResource NavIconStyle}" Glyph="&#xE9D9;" />
@@ -84,8 +79,8 @@
 
             <NavigationView.PaneFooter>
                 <StackPanel Orientation="Horizontal" Spacing="10" Margin="12,12,12,16">
-                    <Border Width="36" Height="36" CornerRadius="9" Background="{ThemeResource CardBrushAlt}">
-                        <Image Source="ms-appx:///Assets/Icones/minecraft-modern-icon.png" Width="40" Height="40" Stretch="Uniform" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                    <Border Width="34" Height="34" CornerRadius="9" Background="{ThemeResource CardBrushAlt}">
+                        <Image Source="ms-appx:///Assets/Icones/menu-icone.png" Width="32" Height="32" Stretch="Uniform" HorizontalAlignment="Center" VerticalAlignment="Center" />
                     </Border>
                     <StackPanel VerticalAlignment="Center">
                         <TextBlock Text="MinecraftTracker" Foreground="{ThemeResource TextPrimaryBrush}" FontSize="12" FontWeight="SemiBold" />

@@ -1,4 +1,6 @@
 C:\Users\sanzi\source\repos\MinecraftTracker\MinecraftTracker\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\Assets\Covers\minecraft_cover.png
+C:\Users\sanzi\source\repos\MinecraftTracker\MinecraftTracker\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\Assets\Icones\avatar.png
+C:\Users\sanzi\source\repos\MinecraftTracker\MinecraftTracker\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\Assets\Icones\menu-icone.png
 C:\Users\sanzi\source\repos\MinecraftTracker\MinecraftTracker\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\Assets\Icones\minecraft-modern-icon.png
 C:\Users\sanzi\source\repos\MinecraftTracker\MinecraftTracker\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\Assets\Icones\minecraft_icone_javaedition.png
 C:\Users\sanzi\source\repos\MinecraftTracker\MinecraftTracker\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\Assets\Sounds\startup.wav

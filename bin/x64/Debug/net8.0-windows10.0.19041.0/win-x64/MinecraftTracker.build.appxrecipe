@@ -34,6 +34,12 @@
     <AppxPackagedFile Include="C:\Users\sanzi\source\repos\MinecraftTracker\MinecraftTracker\Assets\Covers\minecraft_cover.png">
       <PackagePath>Assets\Covers\minecraft_cover.png</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sanzi\source\repos\MinecraftTracker\MinecraftTracker\Assets\Icones\avatar.png">
+      <PackagePath>Assets\Icones\avatar.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sanzi\source\repos\MinecraftTracker\MinecraftTracker\Assets\Icones\menu-icone.png">
+      <PackagePath>Assets\Icones\menu-icone.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\sanzi\source\repos\MinecraftTracker\MinecraftTracker\Assets\Icones\minecraft-modern-icon.png">
       <PackagePath>Assets\Icones\minecraft-modern-icon.png</PackagePath>
     </AppxPackagedFile>

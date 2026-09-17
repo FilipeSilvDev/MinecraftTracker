@@ -28,21 +28,29 @@
     <AppXManifest Include="C:\Users\sanzi\source\repos\MinecraftTracker\MinecraftTracker\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2026-09-15T17:57:27.146</Modified>
+      <Modified>2026-09-17T00:12:50.639</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\sanzi\source\repos\MinecraftTracker\MinecraftTracker\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\MinecraftTracker.runtimeconfig.json">
       <PackagePath>MinecraftTracker.runtimeconfig.json</PackagePath>
-      <Modified>2026-09-15T17:57:26.846</Modified>
+      <Modified>2026-09-17T00:12:50.320</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\sanzi\source\repos\MinecraftTracker\MinecraftTracker\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\apphost.exe">
       <PackagePath>MinecraftTracker.exe</PackagePath>
-      <Modified>2026-09-15T17:57:26.616</Modified>
+      <Modified>2026-09-17T00:12:50.064</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\sanzi\source\repos\MinecraftTracker\MinecraftTracker\Assets\Covers\minecraft_cover.png">
       <PackagePath>Assets\Covers\minecraft_cover.png</PackagePath>
       <Modified>2026-09-15T01:04:45.014</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sanzi\source\repos\MinecraftTracker\MinecraftTracker\Assets\Icones\avatar.png">
+      <PackagePath>Assets\Icones\avatar.png</PackagePath>
+      <Modified>2026-09-16T23:45:18.863</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sanzi\source\repos\MinecraftTracker\MinecraftTracker\Assets\Icones\menu-icone.png">
+      <PackagePath>Assets\Icones\menu-icone.png</PackagePath>
+      <Modified>2026-09-16T23:35:34.874</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\sanzi\source\repos\MinecraftTracker\MinecraftTracker\Assets\Icones\minecraft-modern-icon.png">
       <PackagePath>Assets\Icones\minecraft-modern-icon.png</PackagePath>
@@ -62,7 +70,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\sanzi\source\repos\MinecraftTracker\MinecraftTracker\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\MinecraftTracker.dll">
       <PackagePath>MinecraftTracker.dll</PackagePath>
-      <Modified>2026-09-15T17:57:26.611</Modified>
+      <Modified>2026-09-17T00:12:50.060</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\sanzi\.nuget\packages\microsoft.netcore.app.runtime.win-x64\8.0.31\runtimes\win-x64\lib\net8.0\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -1138,7 +1146,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\sanzi\source\repos\MinecraftTracker\MinecraftTracker\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\MinecraftTracker.deps.json">
       <PackagePath>MinecraftTracker.deps.json</PackagePath>
-      <Modified>2026-09-15T17:57:26.842</Modified>
+      <Modified>2026-09-17T00:12:50.316</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\sanzi\source\repos\MinecraftTracker\MinecraftTracker\Assets\BadgeLogo\BadgeLogo.scale-125.png">
       <PackagePath>Assets\BadgeLogo\BadgeLogo.scale-125.png</PackagePath>
@@ -1214,7 +1222,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\sanzi\source\repos\MinecraftTracker\MinecraftTracker\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2026-09-15T17:57:26.905</Modified>
+      <Modified>2026-09-17T00:12:50.384</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

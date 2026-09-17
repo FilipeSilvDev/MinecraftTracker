@@ -25,6 +25,8 @@
     <None Remove="Assets\BadgeLogo\BadgeLogo.scale-125.png" />
     <None Remove="Assets\BadgeLogo\BadgeLogo.scale-150.png" />
     <None Remove="Assets\Covers\minecraft_cover.png" />
+    <None Remove="Assets\Icones\avatar.png" />
+    <None Remove="Assets\Icones\menu-icone.png" />
     <None Remove="Assets\Icones\minecraft-modern-icon.png" />
     <None Remove="Assets\Icones\MinecraftTracker_icone.scale-100.png" />
     <None Remove="Assets\Icones\MinecraftTracker_icone.scale-200.png" />
@@ -85,6 +87,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Update="Assets\Covers\minecraft_cover.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Assets\Icones\avatar.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Assets\Icones\menu-icone.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Update="Assets\Icones\minecraft-modern-icon.png">
